@@ -6,6 +6,10 @@
     border-bottom: 1px solid lightgray;
 }
 
+.navbar .nav-link {
+    color: white;
+}
+
 .task-section {
     padding-top: 1%;
     padding-bottom: 1%;
@@ -21,10 +25,16 @@
     width: 100%;
 }
 
-.footer-text {
+.footer-copyright {
     white-space: nowrap;
 }
 
 .footer-link {
     color: white;
+}
+
+.footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
 }

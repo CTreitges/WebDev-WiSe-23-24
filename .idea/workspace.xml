@@ -92,7 +92,7 @@
       <updated>1700667135353</updated>
       <workItem from="1700667136364" duration="152000" />
       <workItem from="1700667289986" duration="2272000" />
-      <workItem from="1700670415273" duration="14239000" />
+      <workItem from="1700670415273" duration="16279000" />
     </task>
     <task id="LOCAL-00001" summary="Setup Project">
       <option name="closed" value="true" />
@@ -142,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700685634296</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added navbar, task-section and footer">
+      <option name="closed" value="true" />
+      <created>1700686139414</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1700686139414</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
