@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76bc08d5-5ee0-4b2e-9ae8-05ac65452832" name="Changes" comment="Finished U2.2">
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Style.css" afterDir="false" />
     </list>
@@ -71,10 +72,17 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.Startseite.html (Server)">
+    <configuration name="Startseite.html (Server)" type="JavascriptDebugType" uri="https://team12.wi1cm.uni-trier.de/Startseite.html">
+      <method v="2" />
+    </configuration>
     <configuration name="Startseite.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost/web-entwicklung/Startseite.html">
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.Startseite.html (Server)" />
+      <item itemvalue="JavaScript Debug.Startseite.html" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.Startseite.html" />
@@ -91,7 +99,7 @@
       <updated>1700667135353</updated>
       <workItem from="1700667136364" duration="152000" />
       <workItem from="1700667289986" duration="2272000" />
-      <workItem from="1700670415273" duration="16584000" />
+      <workItem from="1700670415273" duration="17030000" />
     </task>
     <task id="LOCAL-00001" summary="Setup Project">
       <option name="closed" value="true" />
@@ -157,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700688178107</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Finished U2.2">
+      <option name="closed" value="true" />
+      <created>1700688483117</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1700688483117</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

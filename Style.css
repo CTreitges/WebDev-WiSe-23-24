@@ -34,3 +34,12 @@
     display: flex;
     justify-content: space-between;
 }
+
+@media screen and (max-width: 768px) {
+    .footer-copyright {
+        font-size: 12px;
+    }
+    .footer-link {
+        font-size: 12px;
+    }
+}
