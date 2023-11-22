@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76bc08d5-5ee0-4b2e-9ae8-05ac65452832" name="Changes" comment="Changed Startseite.html">
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+    <list default="true" id="76bc08d5-5ee0-4b2e-9ae8-05ac65452832" name="Changes" comment="Added navbar, task-section and footer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Startseite.html" beforeDir="false" afterPath="$PROJECT_DIR$/Startseite.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Style.css" afterDir="false" />
@@ -93,7 +92,7 @@
       <updated>1700667135353</updated>
       <workItem from="1700667136364" duration="152000" />
       <workItem from="1700667289986" duration="2272000" />
-      <workItem from="1700670415273" duration="13709000" />
+      <workItem from="1700670415273" duration="14239000" />
     </task>
     <task id="LOCAL-00001" summary="Setup Project">
       <option name="closed" value="true" />
@@ -135,7 +134,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700671705971</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added navbar, task-section and footer">
+      <option name="closed" value="true" />
+      <created>1700685634296</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1700685634296</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +151,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Setup Project" />
     <MESSAGE value="Changed Startseite.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed Startseite.html" />
+    <MESSAGE value="Added navbar, task-section and footer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added navbar, task-section and footer" />
   </component>
 </project>

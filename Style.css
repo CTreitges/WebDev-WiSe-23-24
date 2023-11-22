@@ -16,5 +16,15 @@
 .footer {
     background-color: #002060;
     color: white;
-    float: bottom;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-text {
+    white-space: nowrap;
+}
+
+.footer-link {
+    color: white;
 }
