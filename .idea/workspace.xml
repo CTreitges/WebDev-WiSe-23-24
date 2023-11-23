@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76bc08d5-5ee0-4b2e-9ae8-05ac65452832" name="Changes" comment="Started A3">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spalten.html" beforeDir="false" afterPath="$PROJECT_DIR$/Spalten.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startseite.html" beforeDir="false" afterPath="$PROJECT_DIR$/Startseite.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +63,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;Chris&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Christof/Documents/GitHub/WebDev-WiSe-23-24&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -74,7 +78,7 @@
     <configuration name="Startseite.html (Server)" type="JavascriptDebugType" uri="https://team12.wi1cm.uni-trier.de/Startseite.html">
       <method v="2" />
     </configuration>
-    <configuration name="Startseite.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost/web-entwicklung/Startseite.html">
+    <configuration name="Startseite.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" engineId="37cae5b9-e8b2-4949-9172-aafa37fbc09c" uri="http://localhost/web-entwicklung/Startseite.html">
       <method v="2" />
     </configuration>
     <list>
@@ -98,6 +102,11 @@
       <workItem from="1700667136364" duration="152000" />
       <workItem from="1700667289986" duration="2272000" />
       <workItem from="1700670415273" duration="17030000" />
+      <workItem from="1700775765992" duration="650000" />
+      <workItem from="1700776428802" duration="148000" />
+      <workItem from="1700776587329" duration="34000" />
+      <workItem from="1700776846268" duration="3341000" />
+      <workItem from="1700780226587" duration="677000" />
     </task>
     <task id="LOCAL-00001" summary="Setup Project">
       <option name="closed" value="true" />

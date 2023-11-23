@@ -10,11 +10,23 @@
     color: white;
 }
 
-.task-section {
+.content-section {
     padding-top: 1%;
     padding-bottom: 1%;
     padding-left: 2%;
     padding-right: 2%;
+}
+
+.create-button {
+    width: 120px;
+    padding-bottom: 0.5%;
+    padding-top: 0.5%;
+    padding-left: 1.5%;
+}
+
+.table-section {
+    padding-right: 1.5%;
+    padding-left: 1.5%;
 }
 
 .footer {
