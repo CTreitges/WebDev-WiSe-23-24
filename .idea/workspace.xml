@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76bc08d5-5ee0-4b2e-9ae8-05ac65452832" name="Changes" comment="Started A3">
+    <list default="true" id="76bc08d5-5ee0-4b2e-9ae8-05ac65452832" name="Changes" comment="Finishing A3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spalten.html" beforeDir="false" afterPath="$PROJECT_DIR$/Spalten.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Startseite.html" beforeDir="false" afterPath="$PROJECT_DIR$/Startseite.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +77,7 @@
     <configuration name="Startseite.html (Server)" type="JavascriptDebugType" uri="https://team12.wi1cm.uni-trier.de/Startseite.html">
       <method v="2" />
     </configuration>
-    <configuration name="Startseite.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" engineId="37cae5b9-e8b2-4949-9172-aafa37fbc09c" uri="http://localhost/web-entwicklung/Startseite.html">
+    <configuration name="Startseite.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost/web-entwicklung/Startseite.html">
       <method v="2" />
     </configuration>
     <list>
@@ -106,7 +105,7 @@
       <workItem from="1700776428802" duration="148000" />
       <workItem from="1700776587329" duration="34000" />
       <workItem from="1700776846268" duration="3341000" />
-      <workItem from="1700780226587" duration="677000" />
+      <workItem from="1700780226587" duration="2447000" />
     </task>
     <task id="LOCAL-00001" summary="Setup Project">
       <option name="closed" value="true" />
@@ -188,7 +187,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700695401254</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Finishing A3">
+      <option name="closed" value="true" />
+      <created>1700781003906</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1700781003906</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +218,7 @@
     <MESSAGE value="Added navbar, task-section and footer" />
     <MESSAGE value="Finished U2.2" />
     <MESSAGE value="Started A3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started A3" />
+    <MESSAGE value="Finishing A3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finishing A3" />
   </component>
 </project>
