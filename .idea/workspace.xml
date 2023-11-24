@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76bc08d5-5ee0-4b2e-9ae8-05ac65452832" name="Changes" comment="Finishing A3">
+    <list default="true" id="76bc08d5-5ee0-4b2e-9ae8-05ac65452832" name="Changes" comment="Finished A3">
+      <change afterPath="$PROJECT_DIR$/Spalte-Erstellen.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spalten.html" beforeDir="false" afterPath="$PROJECT_DIR$/Spalten.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startseite.html" beforeDir="false" afterPath="$PROJECT_DIR$/Startseite.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +105,7 @@
       <workItem from="1700776428802" duration="148000" />
       <workItem from="1700776587329" duration="34000" />
       <workItem from="1700776846268" duration="3341000" />
-      <workItem from="1700780226587" duration="2447000" />
+      <workItem from="1700780226587" duration="6287000" />
     </task>
     <task id="LOCAL-00001" summary="Setup Project">
       <option name="closed" value="true" />
@@ -195,7 +195,23 @@
       <option name="project" value="LOCAL" />
       <updated>1700781003906</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Finishing A3">
+      <option name="closed" value="true" />
+      <created>1700782846290</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1700782846290</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Finished A3">
+      <option name="closed" value="true" />
+      <created>1700782855078</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1700782855078</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +235,7 @@
     <MESSAGE value="Finished U2.2" />
     <MESSAGE value="Started A3" />
     <MESSAGE value="Finishing A3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finishing A3" />
+    <MESSAGE value="Finished A3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished A3" />
   </component>
 </project>
