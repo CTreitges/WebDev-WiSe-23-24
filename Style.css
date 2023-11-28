@@ -1,7 +1,14 @@
+/* Navbar */
+
 .navbar {
     background-color: #002060;
 }
 
-.nav-item {
+.nav-link {
     font-size: 1.5em;
 }
+.nav-link:hover, .nav-link:focus {
+    color: lightgray;
+}
+
+/* Navbar Ende */
