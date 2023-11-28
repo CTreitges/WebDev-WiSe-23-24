@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76bc08d5-5ee0-4b2e-9ae8-05ac65452832" name="Changes" comment="Navbar V2">
+    <list default="true" id="76bc08d5-5ee0-4b2e-9ae8-05ac65452832" name="Changes" comment="Navbar V3 (final)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startseite.html" beforeDir="false" afterPath="$PROJECT_DIR$/Startseite.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +89,7 @@
       <workItem from="1700752561641" duration="273000" />
       <workItem from="1700752843206" duration="451000" />
       <workItem from="1701006057571" duration="504000" />
-      <workItem from="1701172612857" duration="8508000" />
+      <workItem from="1701172612857" duration="9333000" />
     </task>
     <task id="LOCAL-00001" summary="Setup Project">
       <option name="closed" value="true" />
@@ -115,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701179503887</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Navbar V3 (final)">
+      <option name="closed" value="true" />
+      <created>1701182062486</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701182062486</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,7 +156,8 @@
     <MESSAGE value="Setup Project" />
     <MESSAGE value="Navbar V1" />
     <MESSAGE value="Navbar V2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Navbar V2" />
+    <MESSAGE value="Navbar V3 (final)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Navbar V3 (final)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
