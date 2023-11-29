@@ -3,16 +3,32 @@
 .navbar {
     background-color: #002060
 }
+.nav-link {
+    font-size: 1.4em;
+}
 .nav-link:hover, .nav-link:focus {
-    color: lightgray
+    color: white;
 }
 
+
 /* Navbar Ende */
+/* Footer */
 
 .footer {
     position: absolute;
     bottom: 0;
     width: 100%;
+    height: 5%;
     background-color: #002060;
     color: white;
 }
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-link {
+    color: white;
+}
+
+/* Footer Ende */
