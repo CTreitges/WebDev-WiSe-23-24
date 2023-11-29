@@ -3,10 +3,6 @@
 .navbar {
     background-color: #002060;
 }
-
-.nav-link {
-    font-size: 1.5em;
-}
 .nav-link:hover, .nav-link:focus {
     color: lightgray;
 }
