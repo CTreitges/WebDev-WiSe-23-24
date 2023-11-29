@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76bc08d5-5ee0-4b2e-9ae8-05ac65452832" name="Changes" comment="Navbar V4 links geschoben">
+    <list default="true" id="76bc08d5-5ee0-4b2e-9ae8-05ac65452832" name="Changes" comment="A3 Setup Spalten.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spalten.html" beforeDir="false" afterPath="$PROJECT_DIR$/Spalten.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Startseite.html" beforeDir="false" afterPath="$PROJECT_DIR$/Startseite.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Style.css" afterDir="false" />
     </list>
@@ -20,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -141,7 +142,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701258707102</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Footer V2 (nicht responsiv)">
+      <option name="closed" value="true" />
+      <created>1701266747019</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701266747019</updated>
+    </task>
+    <task id="LOCAL-00008" summary="A3 Setup Spalten.html">
+      <option name="closed" value="true" />
+      <created>1701267064938</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701267064938</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,7 +194,9 @@
     <MESSAGE value="Navbar V3 (final)" />
     <MESSAGE value="TaskContainer V1" />
     <MESSAGE value="Navbar V4 links geschoben" />
-    <option name="LAST_COMMIT_MESSAGE" value="Navbar V4 links geschoben" />
+    <MESSAGE value="Footer V2 (nicht responsiv)" />
+    <MESSAGE value="A3 Setup Spalten.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="A3 Setup Spalten.html" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
