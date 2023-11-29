@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76bc08d5-5ee0-4b2e-9ae8-05ac65452832" name="Changes" comment="TaskContainer V1">
+    <list default="true" id="76bc08d5-5ee0-4b2e-9ae8-05ac65452832" name="Changes" comment="Navbar V4 links geschoben">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Startseite.html" beforeDir="false" afterPath="$PROJECT_DIR$/Startseite.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Style.css" afterDir="false" />
@@ -91,7 +91,7 @@
       <workItem from="1700752843206" duration="451000" />
       <workItem from="1701006057571" duration="504000" />
       <workItem from="1701172612857" duration="10735000" />
-      <workItem from="1701243656960" duration="984000" />
+      <workItem from="1701243656960" duration="4430000" />
     </task>
     <task id="LOCAL-00001" summary="Setup Project">
       <option name="closed" value="true" />
@@ -133,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701182769352</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Navbar V4 links geschoben">
+      <option name="closed" value="true" />
+      <created>1701258707102</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701258707102</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +158,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/Chris" />
+                        <option value="Lars" />
                       </list>
                     </value>
                   </entry>
@@ -168,7 +176,8 @@
     <MESSAGE value="Navbar V2" />
     <MESSAGE value="Navbar V3 (final)" />
     <MESSAGE value="TaskContainer V1" />
-    <option name="LAST_COMMIT_MESSAGE" value="TaskContainer V1" />
+    <MESSAGE value="Navbar V4 links geschoben" />
+    <option name="LAST_COMMIT_MESSAGE" value="Navbar V4 links geschoben" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,10 +1,18 @@
 /* Navbar */
 
 .navbar {
-    background-color: #002060;
+    background-color: #002060
 }
 .nav-link:hover, .nav-link:focus {
-    color: lightgray;
+    color: lightgray
 }
 
 /* Navbar Ende */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #002060;
+    color: white;
+}
