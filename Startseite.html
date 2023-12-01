@@ -8,47 +8,44 @@
     <link href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="container-fluid">
-            <div class="row navbar">
-                <ul class="nav">
-                    <li>
+    <header>
+        <div class="navbar">
+            <ul class="nav mb-2 mt-2 ps-5">
+                <li>
+                    <a class="navbar-brand" href="Startseite.html">
                         <img src="Material/Logo.svg" width="150" alt="Logo" class="img-fluid">
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#">Tasks</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#">Boards</a>
-                    </li>
-                    <li>
-                        <a class="nav-link active" href="Spalten.html">Spalten</a>
-                    </li>
-                </ul>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#">Tasks</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#">Boards</a>
+                </li>
+                <li>
+                    <a class="nav-link active" href="Spalten.html">Spalten</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Tasks</h3>
             </div>
-            <div class="row content-section">
-                <div class="card">
-                    <div class="row card-title">
-                        <h3>Tasks</h3>
-                    </div>
-                    <div class="row">
-                        <p>Hier sind alle Tasks</p>
-                    </div>
-                </div>
+            <div class="card-body">
+                <p>Hier stehen später alle Tasks</p>
+
             </div>
-            <div class="row footer">
-                <ul>
-                    <li>
-                        <p class="footer-copyright">©Web-Entwicklung Team 2023</p>
-                    </li>
-                    <li>
-                        <a class="footer-link" href="#">Impressum</a>
-                        <a class="footer-link" href="#">AGB</a>
-                        <a class="footer-link" href="#">Datenschutz</a>
-                    </li>
-                </ul>
-            </div>
-    </div>
-    <script src="https://unpkg.com/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/26d48bf35d.js" crossorigin="anonymous"></script>
+        </div>
+    </main>
+    <footer>
+        <div class="container mb-3 mt-3">
+            <span class="footer-text ">© 2023 Meine Webseite
+                <a class="footer-link" style="margin-left: 70%" href="#">Impressum</a>
+                <a class="footer-link ms-1" href="#">AGB</a>
+                <a class="footer-link ms-1" href="#">Datenschutz</a></span>
+        </div>
+    </footer>
 </body>
 </html>
