@@ -9,10 +9,7 @@
 }
 
 :root main {
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-left: 2%;
-    padding-right: 2%;
+    padding: 1% 2%;
     flex: 1;
 }
 
@@ -46,5 +43,9 @@ body {
 }
 
 .footer-link:hover {
+    color: var(--hover-color);
+}
+
+.fa-symbols:hover {
     color: var(--hover-color);
 }
