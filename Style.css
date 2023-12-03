@@ -29,6 +29,9 @@ body {
 .navbar .nav-link {
     color: var(--primary-text);
 }
+ .navbar .nav-link:hover {
+     color: var(--hover-color);
+ }
 
 .card-header {
     border-bottom: 1px solid lightgray;
