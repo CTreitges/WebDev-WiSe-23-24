@@ -4,8 +4,9 @@ namespace App\Controllers;
 
 class firstController extends BaseController
 {
-    public function viewGruppennummer(): string
+    public int $gruppe=12;
+    public function getviewGruppennummer()
     {
-        return var_dump(12);
+        var_dump($this->gruppe);
     }
 }

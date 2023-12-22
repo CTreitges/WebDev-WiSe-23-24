@@ -16,7 +16,7 @@ class App extends BaseConfig
      *
      *    http://example.com/
      */
-    public string $baseURL = 'http://localhost/web-entwicklung/';
+    public string $baseURL = 'http://localhost:8080/web-entwicklung/public';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
@@ -175,5 +175,4 @@ class App extends BaseConfig
      * @see http://www.w3.org/TR/CSP/
      */
     public bool $CSPEnabled = false;
-
 }
