@@ -9,4 +9,12 @@ class firstController extends BaseController
     {
         var_dump($this->gruppe);
     }
+
+    public function getViews()
+    {
+        echo view('templates/Head');
+        echo view('templates/Nav');
+        echo view('templates/Footer');
+    }
 }
+

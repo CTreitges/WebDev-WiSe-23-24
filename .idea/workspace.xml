@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b0046e1-3581-4a0d-bd21-48e42fb8c144" name="Changes" comment="A2 aber kann den Controller nicht aufrufen">
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" />
+    <list default="true" id="7b0046e1-3581-4a0d-bd21-48e42fb8c144" name="Changes" comment="A2 funktioniert">
+      <change afterPath="$PROJECT_DIR$/app/Views/templates/Footer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Views/templates/Head.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Views/templates/Nav.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Config/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Config/App.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Config/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Config/Database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Config/Routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Config/Routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Controllers/firstController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/firstController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,6 +53,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\eiden\PhpstormProjects\WebDev-WiSe-23-24\public" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -62,7 +67,7 @@
       <option name="presentableId" value="Default" />
       <updated>1703175294667</updated>
       <workItem from="1703175296299" duration="272000" />
-      <workItem from="1703175606146" duration="10966000" />
+      <workItem from="1703175606146" duration="15606000" />
     </task>
     <task id="LOCAL-00001" summary="A2 aber kann den Controller nicht aufrufen">
       <option name="closed" value="true" />
@@ -72,7 +77,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703210382401</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="A2 funktioniert">
+      <option name="closed" value="true" />
+      <created>1703254549912</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1703254549912</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,6 +117,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge pull request #2 from CTreitges/Chris&#10;&#10;added Redirection" />
     <MESSAGE value="A2 aber kann den Controller nicht aufrufen" />
-    <option name="LAST_COMMIT_MESSAGE" value="A2 aber kann den Controller nicht aufrufen" />
+    <MESSAGE value="A2 funktioniert" />
+    <option name="LAST_COMMIT_MESSAGE" value="A2 funktioniert" />
   </component>
 </project>
