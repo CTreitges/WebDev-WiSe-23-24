@@ -26,7 +26,7 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'localhost',
+        'hostname'     => 'hosting.wi1cm.uni-trier.de',
         'username'     => 'team12',
         'password'     => 'q5GK_team12',
         'database'     => 'db_team12',
