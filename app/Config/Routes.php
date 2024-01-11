@@ -7,6 +7,7 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Start::index');
 $routes->get('(:any)/viewGruppennummer', 'Start::viewGruppennummer');
-$routes->get('/Startseite', 'Start::index');
+$routes->get('/Startseite', 'TaskController::index');
 $routes->get('/Spalten', 'Start::Spalten');
 $routes->get('/SpalteErstellen', 'Start::SpalteErstellen');
+$routes->get('/test', 'TaskController::test');
