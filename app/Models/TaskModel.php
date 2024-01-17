@@ -40,4 +40,19 @@ class TaskModel extends Model
         );
         return $result->getResultArray();
     }
-}
+//    public function save()
+//    {
+//        $this->tasks = $this->db->table('tasks');
+//        $this->tasks->insert(array('personenid' => $_POST['Person'],
+//            'taskartenid' => 1, // TODO
+//            'spaltenid' => $_POST['Spalte'],
+//            'sortid' => 1, // TODO
+//            'tasks' => $_POST['BeschreibungDerTask'],
+//            'erstelldatum' => '2024-01-01', // TODO
+//            'erinnerungsdatum' => $_POST['Erinnerungsdatum'],
+//            'erinnerung' => $_POST['Erinnerung'],
+//            'notizen' => $_POST['Notiz'],
+//            'erledigt' => '0',
+//            'gelöscht' => '0',));
+//    }
+    }

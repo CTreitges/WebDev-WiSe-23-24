@@ -28,6 +28,24 @@ class TaskController extends BaseController
         return view('Sites/SpalteErstellen');
     }
 
+    public function TaskErstellen() {
+        return view('Sites/TaskErstellen');
+    }
+
+    public function TaskBearbeiten() {
+        return view('Sites/TaskBearbeiten');
+    }
+
+    public function CreateTask() {
+        $TaskModel = new TaskModel();
+//        echo '<pre>';
+//        var_dump($_POST);
+//        echo '</pre>';
+//        die();
+        $TaskModel->save($_POST);
+        return redirect()->to(base_url().'/Startseite');
+    }
+
     public function test() {
         $taskModel = new TaskModel();
         $data['tasks'] = $taskModel->getAllData();

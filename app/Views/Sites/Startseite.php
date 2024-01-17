@@ -7,6 +7,7 @@
             <h3 class="card-title">Tasks</h3>
         </div>
         <div class="card-body">
+            <a href="<?php echo base_url();?>taskErstellen" class="btn btn-primary btn-sm mb-2">Neu</a>
             <table class="table table-bordered"
                    data-show-columns="true"
                    data-show-toggle="true"
@@ -27,13 +28,14 @@
                     <th>Notizen</th>
                     <th>Erledigt</th>
                     <th>Geloescht</th>
+                    <th>Bearbeiten</th>
                 </tr>
                 </thead>
                 <tbody>
                 <?php
                 if (empty($tasks)): ?>
                     <tr>
-                        <td colspan="4">Keine Aufgaben gefunden.</td>
+                        <td colspan="12">Keine Aufgaben gefunden.</td>
                     </tr>
                 <?php else:
                     foreach ($tasks as $item): ?>
@@ -50,6 +52,14 @@
                             <td><?= $item['notizen'] ?></td>
                             <td><?= $item['erledigt'] ?></td>
                             <td><?= $item['geloescht'] ?></td>
+                            <td>
+                                <a href="<?php echo base_url('/taskBearbeiten'); ?>">
+                                    <i class="fa-symbols fas fa-pen-to-square text-dark"></i>
+                                </a>
+<!--                                <a href="--><?php //echo base_url('/Startseite'); ?><!--">-->
+                                    <i class="fa-symbols fa-solid fa-trash ps-1 text-dark"></i>
+<!--                                </a>-->
+                            </td>
                         </tr>
                     <?php endforeach;
                 endif; ?>
