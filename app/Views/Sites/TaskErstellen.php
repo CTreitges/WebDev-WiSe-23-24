@@ -8,7 +8,7 @@
             </div>
             <div class="card-body">
                 <form method="post" action="<?php
-                echo base_url('/createTask'); ?>">
+                echo base_url('/task_create'); ?>">
                     <div class="mb-3 row">
                         <label for="Taskbezeichnung" class="col-sm-2 col-form-label text-sm-start">Taskbezeichnung</label>
                         <div class="col-sm-10">

@@ -6,10 +6,11 @@ use App\Models\TaskModel;
 
 class TaskController extends BaseController
 {
+
     public function index($title='')
     {
-        $taskModel = new TaskModel();
-        $data['tasks'] = $taskModel->getTasksByBoard('1');
+        $taskmodel = new TaskModel();
+        $data['tasks'] = $taskmodel->getTasks();
         $data['title'] = 'Task Board | Startseite';
         echo view('Sites/Startseite', $data);
     }
@@ -18,6 +19,18 @@ class TaskController extends BaseController
     {
         $gruppennummer = 12;
         var_dump($gruppennummer);
+    }
+
+    public function task_create()
+    {
+        $taskmodel = new TaskModel();
+        $data['tasks'] = $taskmodel->getTasks();
+        //todo
+    }
+
+    public function task_edit()
+    {
+
     }
 
     public function Spalten($title='')

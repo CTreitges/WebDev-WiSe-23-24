@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
-use Config\Database;
 
 class TaskModel extends Model
 {
@@ -17,7 +16,8 @@ class TaskModel extends Model
     protected $createdField = 'erstelldatum';
     protected $updatedField = '';
 
-    public function getAllData():array {
+    public function getAllData(): array
+    {
         $result = $this->db->query('SELECT * FROM tasks');
         return $result->getResultArray();
     }
@@ -40,19 +40,84 @@ class TaskModel extends Model
         );
         return $result->getResultArray();
     }
-//    public function save()
-//    {
-//        $this->tasks = $this->db->table('tasks');
-//        $this->tasks->insert(array('personenid' => $_POST['Person'],
-//            'taskartenid' => 1, // TODO
-//            'spaltenid' => $_POST['Spalte'],
-//            'sortid' => 1, // TODO
-//            'tasks' => $_POST['BeschreibungDerTask'],
-//            'erstelldatum' => '2024-01-01', // TODO
-//            'erinnerungsdatum' => $_POST['Erinnerungsdatum'],
-//            'erinnerung' => $_POST['Erinnerung'],
-//            'notizen' => $_POST['Notiz'],
-//            'erledigt' => '0',
-//            'gelöscht' => '0',));
-//    }
+
+    public function getTasks()
+    {
+        $this->tasks = $this->db->table('tasks');
+        $this->tasks->select();
+
+        $this->tasks->orderBy('id', 'asc');
+        $result = $this->tasks->get();
+        return $result->getResultArray();
     }
+
+    public function getTask($id = null)
+    {
+        $this->tasks = $this->db->table('tasks');
+        $this->tasks->select('*');
+
+        if ($id != NULL) {
+            $this->tasks->where('id', $id);
+        }
+
+        $this->tasks->orderBy('tasks');
+        $result = $this->tasks->get();
+
+        if ($id != NULL) {
+            return $result->getRowArray();
+        } else return $result->getResultArray();
+    }
+
+    public function createTask($taskId = null)
+    {
+        $this->tasks = $this->db->table('tasks');
+        $this->tasks->insert(array('personenid' => $_POST['Person'],
+            'taskartenid' => 1,
+            'spaltenid' => $_POST['Spalte'],
+            'sortid' => 1,
+            'tasks' => $_POST['Bezeichnung'],
+            'erstelldatum' => '2024-01-19',
+            'erinnerungsdatum' => $_POST['Erinnerungsdatum'],
+            'erinnerung' => $_POST['Erinnerung'],
+            'notizen' => $_POST['Notiz'],
+            'erledigt' => '0',
+            'geloescht' => '0',));
+    }
+
+    public function updateTask()
+    {
+        $this->tasks = $this->db->table('tasks');
+        $this->tasks->where('id', $_POST['id']);
+        $this->tasks->update(array('personenid' => $_POST['Person'],
+            'taskartenid' => 1,
+            'spaltenid' => $_POST['Spalte'],
+            'sortid' => 1,
+            'tasks' => $_POST['Bezeichnung'],
+            'erstelldatum' => '2024-01-19',
+            'erinnerungsdatum' => $_POST['Erinnerungsdatum'],
+            'erinnerung' => $_POST['Erinnerung'],
+            'notizen' => $_POST['Notiz'],
+            'erledigt' => '0',
+            'geloescht' => '0',));
+    }
+
+    public function deleteTask()
+    {
+        $this->tasks = $this->db->table('tasks');
+        $this->tasks->where('id', $_POST['id']);
+        $this->tasks->delete();
+    }
+
+    public function getPersonen($person_id = NULL)
+    {
+        $this->personen = $this->db->table('personen');
+        $this->personen->select('*');
+        if ($person_id != NULL)
+            $this->personen->where('id', $person_id);
+        $result = $this->personen->get();
+        if ($person_id != NULL)
+            return $result->getRowArray();
+        else
+            return $result->getResultArray();
+    }
+}
