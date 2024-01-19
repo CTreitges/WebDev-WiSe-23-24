@@ -10,8 +10,9 @@ class TaskController extends BaseController
     public function index($title='')
     {
         $taskmodel = new TaskModel();
+        $data['data'] = $taskmodel->getData();
         $data['tasks'] = $taskmodel->getTasks();
-        $data['title'] = 'Task Board | Startseite';
+        $data['title'] = 'Startseite';
         echo view('Sites/Startseite', $data);
     }
 
@@ -21,21 +22,9 @@ class TaskController extends BaseController
         var_dump($gruppennummer);
     }
 
-    public function task_create()
-    {
-        $taskmodel = new TaskModel();
-        $data['tasks'] = $taskmodel->getTasks();
-        //todo
-    }
-
-    public function task_edit()
-    {
-
-    }
-
     public function Spalten($title='')
     {
-        $data['title'] = 'Task Board | Spalten';
+        $data['title'] = 'Spalten';
         return view('Sites/Spalten', $data);
     }
 
@@ -46,7 +35,7 @@ class TaskController extends BaseController
 
     public function TaskErstellen($title='') {
         $data['title'] = 'Task Board | Task erstellen';
-        return view('Sites/TaskErstellen', $data);
+        return view('Sites/TaskCRUD', $data);
     }
 
     public function TaskBearbeiten($title='') {
@@ -54,19 +43,60 @@ class TaskController extends BaseController
         return view('Sites/TaskBearbeiten', $data);
     }
 
-    public function CreateTask() {
-        $TaskModel = new TaskModel();
-//        echo '<pre>';
-//        var_dump($_POST);
-//        echo '</pre>';
-//        die();
-        $TaskModel->save($_POST);
-        return redirect()->to(base_url().'/Startseite');
-    }
-
     public function test() {
         $taskModel = new TaskModel();
         $data['tasks'] = $taskModel->getAllData();
         var_dump($data);
+    }
+
+    public function __construct() {
+        $this->taskmodel = new TaskModel();
+    }
+
+    public function crudTasks($id = 0, $todo = 0)
+    {
+        $taskmodel = new TaskModel();
+        $data['personen'] = $taskmodel->getPersonen();
+        $data['spalten'] = $taskmodel->getSpalten();
+        $data['tasks'] = $taskmodel->getTasks();
+        $data['todo'] = $todo;
+        switch ($todo) {
+            case 0:
+                $data['title'] = 'Task erstellen';
+                break;
+            case 1:
+                $data['title'] = 'Task bearbeiten';
+                break;
+            case 2:
+                $data['title'] = 'Task löschen';
+                break;
+        }
+
+        if($id > 0 && ($todo == 1 || $todo == 2)) {
+            $data['update'] = $this->taskmodel->getTask($id);
+        }
+
+        echo view('Sites/TaskCRUD', $data);
+    }
+
+    public function submitTasks()
+    {
+        if(isset($_POST['submitTasks'])) {
+
+            if(isset($_POST['id']) && $_POST['id'] != '') {
+                $this->taskmodel->updateTask();
+            }
+            else {
+                $this->taskmodel->createTask();
+            }
+            return redirect()->to(base_url('Startseite'));
+
+        }
+        elseif (isset($_POST['deleteTasks'])){
+            $this->taskmodel->deleteTask();
+            return redirect()->to(base_url('Startseite'));
+        }
+
+        return redirect()->to(base_url('Startseite'));
     }
 }

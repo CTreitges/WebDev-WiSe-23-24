@@ -22,6 +22,18 @@ class TaskModel extends Model
         return $result->getResultArray();
     }
 
+    public function getData()
+    {
+        $this->tasks = $this->db->table('tasks');
+        $this->tasks->select('tasks.*, personen.*, taskarten.*');
+        $this->tasks->join('personen', 'tasks.personenid = personen.id');
+        $this->tasks->join('taskarten', 'tasks.taskartenid = taskarten.id');
+        $this->tasks->orderBy('tasks.id', 'asc');
+
+        $result = $this->tasks->get();
+        return $result->getResultArray();
+    }
+
     public function getTasksByBoard($boardsid)
     {
         $result = $this->db->query(
@@ -48,6 +60,14 @@ class TaskModel extends Model
 
         $this->tasks->orderBy('id', 'asc');
         $result = $this->tasks->get();
+        return $result->getResultArray();
+    }
+
+    public function getSpalten(){
+        $this->spalten = $this->db->table('spalten');
+        $this->spalten->select();
+
+        $result = $this->spalten->get();
         return $result->getResultArray();
     }
 
