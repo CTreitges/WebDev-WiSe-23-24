@@ -11,9 +11,9 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark mb-1 mt-1 ps-5">
             <a class="navbar-brand" href="<?php echo base_url();?>Startseite">
-                <img src="Material/Logo.svg" alt="Logo" width="150" class="d-inline-block align-text-top">
+                <img src="<?php echo base_url();?>Material/Logo.svg" alt="Logo" width="150" class="d-inline-block align-text-top">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler border-2 me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">

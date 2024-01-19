@@ -28,19 +28,10 @@ class TaskController extends BaseController
         return view('Sites/Spalten', $data);
     }
 
-    public function SpalteErstellen($title='') {
-        $data['title'] = 'Task Board | Spalte erstellen';
+    public function SpalteErstellen()
+    {
+        $data['title'] = 'Spalte erstellen';
         return view('Sites/SpalteErstellen', $data);
-    }
-
-    public function TaskErstellen($title='') {
-        $data['title'] = 'Task Board | Task erstellen';
-        return view('Sites/TaskCRUD', $data);
-    }
-
-    public function TaskBearbeiten($title='') {
-        $data['title'] = 'Task Board | Task bearbeiten';
-        return view('Sites/TaskBearbeiten', $data);
     }
 
     public function test() {
@@ -48,6 +39,8 @@ class TaskController extends BaseController
         $data['tasks'] = $taskModel->getAllData();
         var_dump($data);
     }
+
+    // GRUD Funktionen:
 
     public function __construct() {
         $this->taskmodel = new TaskModel();

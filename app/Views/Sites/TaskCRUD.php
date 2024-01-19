@@ -60,16 +60,16 @@
                         </div>
                     </div>
                     <?php if($todo == 0) : ?>
-                        <button type="submit" class="btn btn-primary mt-3" name="submitTasks" id="submitTasks" style="background-color: #002060; border-color: #002060"> <!-- Farbe manuell gesetzt! -->
+                        <button type="submit" class="btn btn-success mt-3" name="submitTasks" id="submitTasks">
                             <i class="fa-solid fa-plus"></i> Hinzufügen</button>
                     <?php endif ?>
 
                     <?php if($todo == 1) : ?>
-                        <button type="submit" class="btn btn-success mt-3" name="submitTasks" id="submitTasks" style="background-color: #002060; border-color: #002060"> <!-- Farbe manuell gesetzt! -->
+                        <button type="submit" class="btn btn-success mt-3" name="submitTasks" id="submitTasks">
                             <i class="fa-solid fa-floppy-disk"></i> Speichern</button>
                     <?php endif ?>
                     <?php if($todo == 2) : ?>
-                        <button type="submit" class="btn btn-danger mt-3" name="deleteTasks" id="deleteTasks" style="background-color: #002060; border-color: #002060"> <!-- Farbe manuell gesetzt! -->
+                        <button type="submit" class="btn btn-danger mt-3" name="deleteTasks" id="deleteTasks">
                             <i class="fa-solid fa-trash-can"></i> Löschen</button>
                     <?php endif ?>
                     <a class="btn btn-secondary mt-3" href="<?=base_url("Startseite")?>">Abbrechen</a>

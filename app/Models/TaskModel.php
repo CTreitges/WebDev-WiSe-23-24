@@ -34,25 +34,6 @@ class TaskModel extends Model
         return $result->getResultArray();
     }
 
-    public function getTasksByBoard($boardsid)
-    {
-        $result = $this->db->query(
-            'SELECT t.id, t.personenid, t.taskartenid, t.spaltenid, t.sortid, t.tasks, t.erstelldatum, 
-                t.erinnerungsdatum, t.erinnerung, t.notizen, t.erledigt, t.geloescht
-            FROM tasks t
-            JOIN spalten s ON t.spaltenid = s.id
-            JOIN boards b ON s.boardsid = b.id
-            WHERE s.id IN (
-                SELECT id
-                FROM spalten
-                WHERE boardsid = ?
-            )
-            ORDER BY t.tasks DESC',
-            [$boardsid]
-        );
-        return $result->getResultArray();
-    }
-
     public function getTasks()
     {
         $this->tasks = $this->db->table('tasks');

@@ -7,7 +7,7 @@
             <h3 class="card-title">Tasks</h3>
         </div>
         <div class="card-body">
-            <a href="<?php echo base_url();?>taskErstellen" class="btn btn-primary btn-sm mb-2">Neu</a>
+            <a href="<?php echo base_url();?>taskErstellen" class="btn btn-success btn-sm mb-2">Neu</a>
             <div class="table-responsive">
                 <table class="table table-bordered"
                        data-show-columns="true"
@@ -54,7 +54,7 @@
                                 <td><?= $item['erledigt'] ?></td>
                                 <td><?= $item['geloescht'] ?></td>
                                 <td>
-                                    <a href="<?php echo base_url('/taskBearbeiten'.'/' . $item['id'] . '/1'); ?>">
+                                    <a href="<?php echo base_url('/taskBearbeiten'.'/' . $item['id'] . '/1'); ?>" style="color: transparent">
                                         <i class="fa-symbols fas fa-pen-to-square text-dark"></i>
                                     </a>
                                     <a href="<?php echo base_url('/taskLoeschen'.'/' . $item['id'] . '/2'); ?>">
