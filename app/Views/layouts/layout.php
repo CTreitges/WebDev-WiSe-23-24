@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> <?php echo $title; ?> | Task Board </title>
+    <link rel="icon" href="<?php echo base_url();?>Material/LogoIcon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="<?php echo base_url();?>Material/LogoIcon.ico" type="image/x-icon">
     <link rel="stylesheet" href="<?php echo base_url();?>Style.css">
     <link href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
