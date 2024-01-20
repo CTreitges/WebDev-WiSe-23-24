@@ -13,7 +13,7 @@
                             <label for="Person" class="form-label">Person auswählen</label>
                         </div>
                         <div class="col-md-9">
-                            <select class="form-select" aria-label="Person" type="text" id="Person" name="Person">
+                            <select class="form-select" aria-label="Person" type="text" id="Person" name="Person" <?php if ($todo == 2) {echo 'disabled';} ?>>
                                 <?php for($i=0; $i < count($personen); $i++): ?>
                                     <option value="<?php echo $personen[$i]['id'] ?>" <?php if (isset($update['id'])) {if($update['personenid'] == $i + 1){echo 'selected';}} ?>>
                                         <?php echo $personen[$i]['vorname'] . ' '; echo $personen[$i]['name']; ?>
@@ -25,13 +25,13 @@
                             <label for="Bezeichnung" class="form-label">Beschreibung der Task</label>
                         </div>
                         <div class="col-md-9">
-                            <textarea class="form-control"  id="Bezeichnung" style="height: 100px" name="Bezeichnung"><?php echo isset($update['tasks']) ? $update['tasks'] : '' ?></textarea>
+                            <textarea class="form-control"  id="Bezeichnung" style="height: 100px" name="Bezeichnung" <?php if ($todo == 2) {echo 'disabled';} ?>><?php echo isset($update['tasks']) ? $update['tasks'] : '' ?></textarea>
                         </div>
                         <div class="col-md-3">
                             <label for="Erinnerung" class="form-label">Erinnerung</label>
                         </div>
                         <div class="col-md-9">
-                            <select class="form-select" aria-label="Erinnerung" type="text" id="Erinnerung" name="Erinnerung">
+                            <select class="form-select" aria-label="Erinnerung" type="text" id="Erinnerung" name="Erinnerung" <?php if ($todo == 2) {echo 'disabled';} ?>>
                                 <option value="1" <?php if (isset($update['id'])) {if($update['erinnerung'] == 1){echo 'selected';}} ?>>Ja</option>
                                 <option value="0" <?php if (isset($update['id'])) {if($update['erinnerung'] == 0){echo 'selected';}} ?>>Nein</option>
                             </select>
@@ -40,19 +40,19 @@
                             <label for="Erinnerungsdatum" class="form-label">Erinnerungsdatum</label>
                         </div>
                         <div class="col-md-9">
-                            <input type="datetime-local" id="Erinnerungsdatum" class="form-control" name="Erinnerungsdatum" value="<?php echo substr(isset($update['erinnerungsdatum']) ? $update['erinnerungsdatum'] : '', 0,16) ?>">
+                            <input type="datetime-local" id="Erinnerungsdatum" class="form-control" name="Erinnerungsdatum" value="<?php echo substr(isset($update['erinnerungsdatum']) ? $update['erinnerungsdatum'] : '', 0,16) ?>" <?php if ($todo == 2) {echo 'disabled';} ?>>
                         </div>
                         <div class="col-md-3">
                             <label for="Notiz" class="form-label">Notiz</label>
                         </div>
                         <div class="col-md-9">
-                            <textarea class="form-control"  id="Notiz" style="height: 100px" name="Notiz"><?php echo isset($update['notizen']) ? $update['notizen'] : '' ?></textarea>
+                            <textarea class="form-control"  id="Notiz" style="height: 100px" name="Notiz" <?php if ($todo == 2) {echo 'disabled';} ?>><?php echo isset($update['notizen']) ? $update['notizen'] : '' ?></textarea>
                         </div>
                         <div class="col-md-3">
                             <label for="Spalte" class="form-label">Spalte auswählen</label>
                         </div>
                         <div class="col-md-9">
-                            <select class="form-select" aria-label="Spalte" type="text" id="Spalte" name="Spalte">
+                            <select class="form-select" aria-label="Spalte" type="text" id="Spalte" name="Spalte" <?php if ($todo == 2) {echo 'disabled';} ?>>
                                 <?php for($i=0; $i < count($spalten); $i++): ?>
                                     <option value="<?php echo $spalten[$i]['id'] ?>" <?php if (isset($update['id'])) {if($update['spaltenid'] == $i + 1){echo 'selected';}} ?>><?php echo $spalten[$i]['spalte'] ?></option>
                                 <?php endfor;?>

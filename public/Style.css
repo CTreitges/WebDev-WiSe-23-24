@@ -30,6 +30,7 @@ body {
 
 .navbar .nav-link {
     color: var(--primary-text);
+    font-size: 1.2em;
 }
  .navbar .nav-link:hover {
      color: var(--hover-color);
@@ -53,4 +54,9 @@ body {
 
 .fa-symbols:hover {
     color: var(--hover-color);
+}
+
+.vertical-line {
+    border-right: 0.15em solid var(--primary-text);
+    height: 2.5em;
 }

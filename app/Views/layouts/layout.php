@@ -9,10 +9,11 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark mb-1 mt-1 ps-5">
+        <nav class="navbar navbar-expand-lg navbar-dark mb-1 mt-1 ps-3">
             <a class="navbar-brand" href="<?php echo base_url();?>Startseite">
                 <img src="<?php echo base_url();?>Material/Logo.svg" alt="Logo" width="150" class="d-inline-block align-text-top">
             </a>
+            <div class=" vertical-line d-none d-lg-block mx-3"></div>
             <button class="navbar-toggler border-2 me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -33,7 +34,7 @@
     </header>
     <?= $this->renderSection('content') ?>
     <footer>
-        <div class="container-fluid mb-3 mt-3 d-flex flex-wrap justify-content-between">
+        <div class="container-fluid mb-3 mt-3 ps-3 d-flex flex-wrap justify-content-between">
             <span class="footer-text">
                 © 2023 Meine Webseite
             </span>
