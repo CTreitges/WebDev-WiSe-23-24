@@ -10,7 +10,7 @@
             <a href="<?php echo base_url();?>spalteErstellen" class="btn btn-success btn-sm">
                 <i class="fa-solid fa-plus"></i> Erstellen</a>
             <div class="table-responsive mt-2">
-                <table class="table table-bordered"
+                <table class="table table-bordered table-striped table-responsive table-hover d-table"
                        data-show-columns="true"
                        data-show-toggle="true"
                        data-toggle="table"
