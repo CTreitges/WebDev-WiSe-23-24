@@ -26,7 +26,7 @@
                         <a class="nav-link" href="<?php echo base_url();?>Startseite">Tasks</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Boards</a>
+                        <a class="nav-link" href="<?php echo base_url();?>Boards">Boards</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url();?>Spalten">Spalten</a>
