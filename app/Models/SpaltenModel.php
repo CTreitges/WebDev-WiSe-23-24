@@ -4,48 +4,66 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class TaskModel extends Model
+class SpaltenModel extends Model
 {
 
-    public function getTasks()
+    public function getSpalten()
     {
-        $this->tasks = $this->db->table('tasks');
-        $this->tasks->select();
-        $this->tasks->orderBy('id', 'asc');
-        $result = $this->tasks->get();
-        return $result->getResultArray();
-    }
-
-    public function getSpalten(){
         $this->spalten = $this->db->table('spalten');
         $this->spalten->select();
+        $this->spalten->orderBy('id', 'asc');
         $result = $this->spalten->get();
         return $result->getResultArray();
     }
 
-    public function getTask($id = null)
-    {
+    public function getTasks(){
         $this->tasks = $this->db->table('tasks');
-        $this->tasks->select('*');
-        if ($id != NULL) {
-            $this->tasks->where('id', $id);
-        }
-        $this->tasks->orderBy('tasks');
+        $this->tasks->select();
+
         $result = $this->tasks->get();
+        return $result->getResultArray();
+    }
+
+    public function getSpalte($id = null)
+    {
+        $this->spalten = $this->db->table('spalten');
+        $this->spalten->select('*');
+
+        if ($id != NULL) {
+            $this->spalten->where('id', $id);
+        }
+
+        $this->spalten->orderBy('spalten');
+        $result = $this->spalten->get();
+
         if ($id != NULL) {
             return $result->getRowArray();
         } else return $result->getResultArray();
     }
 
-    public function createTask()
+    public function getBoards($boards_id = NULL)
     {
-        $this->tasks = $this->db->table('tasks');
-        $this->tasks->insert(array('personenid' => $_POST['Person'],
+        $this->boards = $this->db->table('boards');
+        $this->boards->select('*');
+        if ($boards_id != NULL)
+            $this->boards->where('id', $boards_id);
+        $result = $this->boards->get();
+        if ($boards_id != NULL)
+            return $result->getRowArray();
+        else
+            return $result->getResultArray();
+    }
+
+    public function createBoard()
+    {
+        $this->spalten = $this->db->table('spalten');
+        $this->spalten->insert(array(
+            'id' => $_POST['Spalte'],
             'taskartenid' => 1,
             'spaltenid' => $_POST['Spalte'],
             'sortid' => 1,
             'tasks' => $_POST['Bezeichnung'],
-            'erstelldatum' => '2024-01-19',
+            'erstelldatum' => '2024-01-19', //Todo aktueles Datum!
             'erinnerungsdatum' => $_POST['Erinnerungsdatum'],
             'erinnerung' => $_POST['Erinnerung'],
             'notizen' => $_POST['Notiz'],
@@ -77,16 +95,4 @@ class TaskModel extends Model
         $this->tasks->delete();
     }
 
-    public function getPersonen($person_id = NULL)
-    {
-        $this->personen = $this->db->table('personen');
-        $this->personen->select('*');
-        if ($person_id != NULL)
-            $this->personen->where('id', $person_id);
-        $result = $this->personen->get();
-        if ($person_id != NULL)
-            return $result->getRowArray();
-        else
-            return $result->getResultArray();
-    }
 }

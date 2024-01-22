@@ -7,36 +7,49 @@
             <h3 class="card-title">Spalten</h3>
         </div>
         <div class="card-body">
-            <a href="<?php echo base_url();?>SpalteErstellen" class="btn btn-success btn-sm">Erstellen</a>
+            <a href="<?php echo base_url();?>spalteErstellen" class="btn btn-success btn-sm">Erstellen</a>
             <div class="table-responsive mt-2">
-                <table class="table table-bordered">
+                <table class="table table-bordered"
+                       data-show-columns="true"
+                       data-show-toggle="true"
+                       data-toggle="table"
+                       data-search="true"
+                       data-toolbar="#toolbar">
                     <thead>
                     <tr>
-                        <th>ID</th>
+                        <th>Id</th>
                         <th>Board</th>
-                        <th>Sortid</th>
+                        <th>SortId</th>
                         <th>Spalte</th>
                         <th>Spaltenbeschreibung</th>
                         <th>Bearbeiten</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Board 1</td>
-                        <td>100</td>
-                        <td>Spalte 1</td>
-                        <td>Beschreibung 1</td>
-                        <td><i class="fa-symbols fas fa-pen-to-square"></i><i class="fa-symbols fa-solid fa-trash ps-1"></i></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Board 2</td>
-                        <td>200</td>
-                        <td>Spalte 2</td>
-                        <td>Beschreibung 2</td>
-                        <td><i class="fa-symbols fas fa-pen-to-square"></i><i class="fa-symbols fa-solid fa-trash ps-1"></i></td>
-                    </tr>
+                    <?php
+                    if (empty($spalten)): ?>
+                        <tr>
+                            <td colspan="12">Keine Spalten gefunden.</td>
+                        </tr>
+                    <?php else:
+                        foreach ($spalten as $item): ?>
+                            <tr>
+                                <td><?= $item['id'] ?></td>
+                                <td><?= $item['boardsid'] ?></td>
+                                <td><?= $item['sortid'] ?></td>
+                                <td><?= $item['spalte'] ?></td>
+                                <td><?= $item['spaltenbeschreibung'] ?></td>
+                                <td>
+                                    <a href="<?php echo base_url('/spalteBearbeiten'.'/' . $item['id'] . '/1'); ?>" style="color: transparent">
+                                        <i class="fa-symbols fas fa-pen-to-square text-dark"></i>
+                                    </a>
+                                    <a href="<?php echo base_url('/spalteLoeschen'.'/' . $item['id'] . '/2'); ?>">
+                                        <i class="fa-symbols fa-solid fa-trash ps-1 text-dark"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        <?php endforeach;
+                    endif; ?>
                     </tbody>
                 </table>
             </div>
