@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="<?php echo base_url();?>Material/LogoIcon.ico" type="image/x-icon">
     <link rel="stylesheet" href="<?php echo base_url();?>Style.css">
     <link href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.18.3/dist/bootstrap-table.min.css">
 </head>
 <body>
     <header>
@@ -49,5 +50,6 @@
     </footer>
     <script src="https://unpkg.com/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/26d48bf35d.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
 </body>
 </html>

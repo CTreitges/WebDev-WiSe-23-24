@@ -25,7 +25,17 @@
                             <label for="Sortid" class="form-label">Sortid</label>
                         </div>
                         <div class="col-md-9">
-                            <input type="number" class="form-control" id="Sortid" name="Sortid" value="<?php echo isset($update['sortid']) ? $update['sortid'] : '' ?>" <?php if ($todo == 2) {echo 'disabled';} ?>>
+                            <input type="number" class="form-control" id="Sortid" name="Sortid" value="<?php echo isset($update['sortid']) ? $update['sortid'] : '0' ?>" <?php if ($todo == 2) {echo 'disabled';} ?>>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="Spalte" class="form-label">Board auswählen</label>
+                        </div>
+                        <div class="col-md-9">
+                            <select class="form-select" aria-label="Board" type="text" id="Board" name="Board" <?php if ($todo == 2) {echo 'disabled';} ?>>
+                                <?php for($i=0; $i < count($boards); $i++): ?>
+                                    <option value="<?php echo $boards[$i]['id'] ?>" <?php if (isset($update['id'])) {if($update['boardsid'] == $i + 1){echo 'selected';}} ?>><?php echo $boards[$i]['board'] ?></option>
+                                <?php endfor;?>
+                            </select>
                         </div>
                     </div>
                     <?php if($todo == 0) : ?>

@@ -61,7 +61,7 @@ class SpaltenController extends BaseController
             return redirect()->to(base_url('Spalten'));
 
         }
-        elseif (isset($_POST['deleteTasks'])){
+        elseif (isset($_POST['deleteSpalten'])){
             $this->spaltenmodel->deleteSpalte();
             return redirect()->to(base_url('Spalten'));
         }
