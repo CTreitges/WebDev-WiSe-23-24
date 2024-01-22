@@ -21,6 +21,9 @@ class TaskController extends BaseController
         var_dump($gruppennummer);
     }
 
+    /*
+    Statische Seite - nicht mehr in Benutzung
+
     public function Spalten($title='')
     {
         $data['title'] = 'Spalten';
@@ -32,12 +35,15 @@ class TaskController extends BaseController
         $data['title'] = 'Spalte erstellen';
         return view('Sites/SpalteErstellen', $data);
     }
+    */
 
     public function test() {
         $taskModel = new TaskModel();
         $data['tasks'] = $taskModel->getAllData();
         var_dump($data);
     }
+
+
 
     // GRUD Funktionen:
 

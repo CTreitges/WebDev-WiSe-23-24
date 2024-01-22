@@ -21,7 +21,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
+                    <li class="nav-item <?php echo ($title == 'Startseite') ? 'active' : ''; ?>">
                         <a class="nav-link" href="<?php echo base_url();?>Startseite">Tasks</a>
                     </li>
                     <li class="nav-item">

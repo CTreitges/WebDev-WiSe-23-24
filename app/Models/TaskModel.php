@@ -40,12 +40,13 @@ class TaskModel extends Model
     public function createTask()
     {
         $this->tasks = $this->db->table('tasks');
-        $this->tasks->insert(array('personenid' => $_POST['Person'],
+        $this->tasks->insert(array(
+            'personenid' => $_POST['Person'],
             'taskartenid' => 1,
             'spaltenid' => $_POST['Spalte'],
             'sortid' => 1,
             'tasks' => $_POST['Bezeichnung'],
-            'erstelldatum' => '2024-01-19',
+            'erstelldatum' => date("Y-m-d"),
             'erinnerungsdatum' => $_POST['Erinnerungsdatum'],
             'erinnerung' => $_POST['Erinnerung'],
             'notizen' => $_POST['Notiz'],
@@ -57,17 +58,13 @@ class TaskModel extends Model
     {
         $this->tasks = $this->db->table('tasks');
         $this->tasks->where('id', $_POST['id']);
-        $this->tasks->update(array('personenid' => $_POST['Person'],
-            'taskartenid' => 1,
+        $this->tasks->update(array(
+            'personenid' => $_POST['Person'],
             'spaltenid' => $_POST['Spalte'],
-            'sortid' => 1,
             'tasks' => $_POST['Bezeichnung'],
-            'erstelldatum' => '2024-01-19',
             'erinnerungsdatum' => $_POST['Erinnerungsdatum'],
             'erinnerung' => $_POST['Erinnerung'],
-            'notizen' => $_POST['Notiz'],
-            'erledigt' => '0',
-            'geloescht' => '0',));
+            'notizen' => $_POST['Notiz'],));
     }
 
     public function deleteTask()

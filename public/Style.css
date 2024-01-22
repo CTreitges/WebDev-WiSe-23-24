@@ -1,8 +1,8 @@
-/* in TaskCRUD sind hintergrundfarebn manuell gesetzt  */
+/* in TaskCRUD sind Hintergrundfaren manuell gesetzt  */
 
 :root {
     --primary-color: #002060;
-    --hover-color: lightblue;
+    --hover-color: #4fcfff;
     --primary-text: white;
 }
 

@@ -7,7 +7,8 @@
             <h3 class="card-title">Spalten</h3>
         </div>
         <div class="card-body">
-            <a href="<?php echo base_url();?>spalteErstellen" class="btn btn-success btn-sm">Erstellen</a>
+            <a href="<?php echo base_url();?>spalteErstellen" class="btn btn-success btn-sm">
+                <i class="fa-solid fa-plus"></i> Erstellen</a>
             <div class="table-responsive mt-2">
                 <table class="table table-bordered"
                        data-show-columns="true"

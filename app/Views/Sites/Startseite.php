@@ -7,7 +7,8 @@
             <h3 class="card-title">Tasks</h3>
         </div>
         <div class="card-body">
-            <a href="<?php echo base_url();?>taskErstellen" class="btn btn-success btn-sm mb-2">Neu</a>
+            <a href="<?php echo base_url();?>taskErstellen" class="btn btn-success btn-sm mb-2">
+                <i class="fa-solid fa-plus"></i> Neu</a>
             <div class="table-responsive">
                 <table class="table table-bordered"
                        data-show-columns="true"

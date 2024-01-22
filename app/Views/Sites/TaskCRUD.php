@@ -37,7 +37,7 @@
                             </select>
                         </div>
                         <div class="col-md-3">
-                            <label for="Erinnerungsdatum" class="form-label">Erinnerungsdatum</label>
+                            <label for="Erinnerungsdatum" class="form-label">Erinnerungsdatum</label> <!-- Todo soll disabled sein, wenn Erinnerung NEIN -->
                         </div>
                         <div class="col-md-9">
                             <input type="datetime-local" id="Erinnerungsdatum" class="form-control" name="Erinnerungsdatum" value="<?php echo substr(isset($update['erinnerungsdatum']) ? $update['erinnerungsdatum'] : '', 0,16) ?>" <?php if ($todo == 2) {echo 'disabled';} ?>>
