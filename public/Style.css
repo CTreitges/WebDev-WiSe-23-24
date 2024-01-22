@@ -28,6 +28,10 @@ body {
     min-height: 100vh;
 }
 
+.nav-pills .nav-link.active {
+    background-color: #002e83 !important;
+}
+
 .navbar .nav-link {
     color: var(--primary-text);
     font-size: 1.2em;

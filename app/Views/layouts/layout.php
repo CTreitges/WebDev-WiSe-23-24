@@ -21,15 +21,15 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item <?php echo ($title == 'Startseite') ? 'active' : ''; ?>">
-                        <a class="nav-link" href="<?php echo base_url();?>Startseite">Tasks</a>
+                <ul class="navbar-nav nav-pills">
+                    <li class="nav-item">
+                        <a class="<?php echo ($title == 'Startseite') ? 'active' : ''; ?> nav-link" href="<?php echo base_url();?>Startseite">Tasks</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url();?>Boards">Boards</a>
+                        <a class="<?php echo ($title == 'Boards') ? 'active' : ''; ?> nav-link" href="<?php echo base_url();?>Boards">Boards</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url();?>Spalten">Spalten</a>
+                        <a class="<?php echo ($title == 'Spalten') ? 'active' : ''; ?> nav-link" href="<?php echo base_url();?>Spalten">Spalten</a>
                     </li>
                 </ul>
             </div>
