@@ -2,6 +2,7 @@
 
 :root {
     --primary-color: #002060;
+    --secondary-color: #002e83;
     --hover-color: #4fcfff;
     --primary-text: white;
 }
@@ -29,7 +30,18 @@ body {
 }
 
 .nav-pills .nav-link.active {
-    background-color: #002e83 !important;
+    background-color: var(--secondary-color) !important;
+}
+
+@media (max-width: 991px) {
+    .nav-pills .nav-link {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+    .nav-item {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .navbar .nav-link {
