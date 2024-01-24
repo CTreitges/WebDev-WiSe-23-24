@@ -2,15 +2,18 @@
 
 namespace App\Controllers;
 
+use App\Models\SpaltenModel;
 use App\Models\TaskModel;
 
 class TaskController extends BaseController
 {
+    public function __construct() {
+        $this->taskmodel = new TaskModel();
+    }
 
     public function index($title='')
     {
-        $taskmodel = new TaskModel();
-        $data['tasks'] = $taskmodel->getTasks();
+        $data['tasks'] = $this->taskmodel->getTasks();
         $data['title'] = 'Startseite';
         echo view('Sites/Startseite', $data);
     }
@@ -47,16 +50,11 @@ class TaskController extends BaseController
 
     // GRUD Funktionen:
 
-    public function __construct() {
-        $this->taskmodel = new TaskModel();
-    }
-
     public function crudTasks($id = 0, $todo = 0)
     {
-        $taskmodel = new TaskModel();
-        $data['personen'] = $taskmodel->getPersonen();
-        $data['spalten'] = $taskmodel->getSpalten();
-        $data['tasks'] = $taskmodel->getTasks();
+        $data['personen'] = $this->taskmodel->getPersonen();
+        $data['spalten'] = $this->taskmodel->getSpalten();
+        $data['tasks'] = $this->taskmodel->getTasks();
         $data['todo'] = $todo;
         switch ($todo) {
             case 0:
@@ -79,22 +77,39 @@ class TaskController extends BaseController
 
     public function submitTasks()
     {
+        $validation = \Config\Services::validation();
+
         if(isset($_POST['submitTasks'])) {
 
-            if(isset($_POST['id']) && $_POST['id'] != '') {
-                $this->taskmodel->updateTask();
+            if ($validation->run($_POST,'tasksbearbeiten')) {
+                if (isset($_POST['id']) && $_POST['id'] != '') {
+                    $this->taskmodel->updateTask();
+                } else {
+                    $this->taskmodel->createTask();
+                }
+                return redirect()->to(base_url('Startseite'));
+            } else {
+                $data['personen'] = $this->taskmodel->getPersonen();
+                $data['spalten'] = $this->taskmodel->getSpalten();
+                $data['tasks'] = $this->taskmodel->getTasks();
+                $data['error'] = $this->validation->getErrors();
+
+                if (isset($_POST['id']) && $_POST['id'] != '') {
+                    $data['title'] = 'Task bearbeiten';
+                    $data['todo'] = 1;
+                    $data['update'] = $this->taskmodel->getTask($_POST['id']);
+                } else {
+                    $data['title'] = 'Task erstellen';
+                    $data['todo'] = 0;
+                }
+
+                echo view('Sites/TaskCRUD', $data);
             }
-            else {
-                $this->taskmodel->createTask();
-            }
-            return redirect()->to(base_url('Startseite'));
 
         }
         elseif (isset($_POST['deleteTasks'])){
             $this->taskmodel->deleteTask();
             return redirect()->to(base_url('Startseite'));
         }
-
-        return redirect()->to(base_url('Startseite'));
     }
 }

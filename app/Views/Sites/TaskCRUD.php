@@ -22,10 +22,13 @@
                             </select>
                         </div>
                         <div class="col-md-3">
-                            <label for="Bezeichnung" class="form-label">Beschreibung der Task</label>
+                            <label for="Bezeichnung" class="form-label">Bezeichnung der Task</label>
                         </div>
                         <div class="col-md-9">
-                            <textarea class="form-control"  id="Bezeichnung" style="height: 100px" name="Bezeichnung" <?php if ($todo == 2) {echo 'disabled';} ?>><?php echo isset($update['tasks']) ? $update['tasks'] : '' ?></textarea>
+                            <textarea class="form-control <?=(isset($error['Bezeichnung']))?'is-invalid':'' ?>"  id="Bezeichnung" style="height: 100px" name="Bezeichnung" <?php if ($todo == 2) {echo 'disabled';} ?>><?php echo isset($update['tasks']) ? $update['tasks'] : '' ?></textarea>
+                            <div class="invalid-feedback">
+                                <?php if(isset($error['Bezeichnung'])) echo $error['Bezeichnung']; ?>
+                            </div>
                         </div>
                         <div class="col-md-3">
                             <label for="Erinnerung" class="form-label">Erinnerung</label>

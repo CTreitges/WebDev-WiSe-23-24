@@ -42,11 +42,21 @@ class Validation extends BaseConfig
     // Rules
     // --------------------------------------------------------------------
 
+    public $tasksbearbeiten = [
+        'Bezeichnung'  => 'required',
+    ];
+
     public $spaltenbearbeiten = [
             'Spalte'                => 'required',
             'Spaltenbeschreibung'   => 'required',
             'Sortid'                => 'numeric',
-        ];
+    ];
+
+    public $tasksbearbeiten_errors = [
+        'Bezeichnung' => [
+            'required' => 'Bitte geben Sie eine Bezeichnung für die Task ein.'
+        ],
+    ];
 
     public $spaltenbearbeiten_errors = [
         'Spalte' => [

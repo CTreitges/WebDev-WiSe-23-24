@@ -6,28 +6,24 @@ use App\Models\SpaltenModel;
 
 class SpaltenController extends BaseController
 {
+    public function __construct() {
+        $this->spaltenmodel = new SpaltenModel();
+    }
 
     public function index($title='')
     {
-        $spaltenmodel = new SpaltenModel();
-        $data['spalten'] = $spaltenmodel->getSpalten();
+        $data['spalten'] = $this->spaltenmodel->getSpalten();
         $data['title'] = 'Spalten';
         echo view('Sites/Spalten', $data);
     }
 
 
-
     //CRUD Funktionen:
-
-    public function __construct() {
-        $this->spaltenmodel = new SpaltenModel();
-    }
 
     public function crudSpalten($id = 0, $todo = 0)
     {
-        $spaltenmodel = new SpaltenModel();
-        $data['spalten'] = $spaltenmodel->getSpalten();
-        $data['boards'] = $spaltenmodel->getBoards();
+        $data['spalten'] = $this->spaltenmodel->getSpalten();
+        $data['boards'] = $this->spaltenmodel->getBoards();
         $data['todo'] = $todo;
         switch ($todo) {
             case 0:
@@ -57,10 +53,6 @@ class SpaltenController extends BaseController
 
         if(isset($_POST['submitSpalten'])) {
 
-            if (isset($_POST['id']) && $_POST['id'] != '') {
-                $id = $_POST['id'];
-            }
-
             if ($validation->run($_POST,'spaltenbearbeiten')) {
 
                 if (isset($_POST['id']) && $_POST['id'] != '') {
@@ -71,15 +63,14 @@ class SpaltenController extends BaseController
                 return redirect()->to(base_url('Spalten'));
 
             } else {
-                $spaltenmodel = new SpaltenModel();
-                $data['spalten'] = $spaltenmodel->getSpalten();
-                $data['boards'] = $spaltenmodel->getBoards();
+                $data['spalten'] = $this->spaltenmodel->getSpalten();
+                $data['boards'] = $this->spaltenmodel->getBoards();
                 $data['error'] = $this->validation->getErrors();
 
                 if (isset($_POST['id']) && $_POST['id'] != '') {
                     $data['title'] = 'Spalte bearbeiten';
                     $data['todo'] = 1;
-                    $data['update'] = $this->spaltenmodel->getSpalte($id);
+                    $data['update'] = $this->spaltenmodel->getSpalte($_POST['id']);
                 } else {
                     $data['title'] = 'Spalte erstellen';
                     $data['todo'] = 0;

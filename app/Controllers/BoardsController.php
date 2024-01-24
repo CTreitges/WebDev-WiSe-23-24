@@ -6,27 +6,23 @@ use App\Models\BoardsModel;
 
 class BoardsController extends BaseController
 {
+    public function __construct() {
+        $this->boardsmodel = new BoardsModel();
+    }
 
     public function index($title='')
     {
-        $boardsmodel = new BoardsModel();
-        $data['boards'] = $boardsmodel->getBoards();
+        $data['boards'] = $this->boardsmodel->getBoards();
         $data['title'] = 'Boards';
         echo view('Sites/Boards', $data);
     }
 
 
-
     //CRUD Funktionen:
-
-    public function __construct() {
-        $this->boardsmodel = new BoardsModel();
-    }
 
     public function crudBoards($id = 0, $todo = 0)
     {
-        $boardsmodel = new BoardsModel();
-        $data['boards'] = $boardsmodel->getBoards();
+        $data['boards'] = $this->boardsmodel->getBoards();
         $data['todo'] = $todo;
         switch ($todo) {
             case 0:
