@@ -13,19 +13,28 @@
                             <label for="Spalte" class="form-label">Spalte</label>
                         </div>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" id="Spalte" name="Spalte" value="<?php echo isset($update['spalte']) ? $update['spalte'] : '' ?>" <?php if ($todo == 2) {echo 'disabled';} ?>>
+                            <input type="text" class="form-control <?=(isset($error['spalte']))?'is-invalid':'' ?>" id="Spalte" name="Spalte" value="<?php echo isset($update['spalte']) ? $update['spalte'] : '' ?>" <?php if ($todo == 2) {echo 'disabled';} ?>>
+                            <div class="invalid-feedback">
+                                <?php if(isset($error['spalte'])) echo $error['spalte']; ?>
+                            </div>
                         </div>
                         <div class="col-md-3">
                             <label for="Spaltenbeschreibung" class="form-label">Spaltenbeschreibung</label>
                         </div>
                         <div class="col-md-9">
-                            <textarea class="form-control" id="Spaltenbeschreibung" style="height: 100px" name="Spaltenbeschreibung" <?php if ($todo == 2) {echo 'disabled';} ?>><?php echo isset($update['spaltenbeschreibung']) ? $update['spaltenbeschreibung'] : '' ?></textarea>
+                            <textarea class="form-control <?=(isset($error['spaltenbeschreibung']))?'is-invalid':'' ?>" id="Spaltenbeschreibung" style="height: 100px" name="Spaltenbeschreibung" <?php if ($todo == 2) {echo 'disabled';} ?>><?php echo isset($update['spaltenbeschreibung']) ? $update['spaltenbeschreibung'] : '' ?></textarea>
+                            <div class="invalid-feedback">
+                                <?php if(isset($error['spaltenbeschreibung'])) echo $error['spaltenbeschreibung']; ?>
+                            </div>
                         </div>
                         <div class="col-md-3">
                             <label for="Sortid" class="form-label">Sortid</label>
                         </div>
                         <div class="col-md-9">
-                            <input type="number" class="form-control" id="Sortid" name="Sortid" value="<?php echo isset($update['sortid']) ? $update['sortid'] : '0' ?>" <?php if ($todo == 2) {echo 'disabled';} ?>>
+                            <input type="number" class="form-control <?=(isset($error['sortid']))?'is-invalid':'' ?>" id="Sortid" name="Sortid" value="<?php echo isset($update['sortid']) ? $update['sortid'] : '0' ?>" <?php if ($todo == 2) {echo 'disabled';} ?>>
+                            <div class="invalid-feedback">
+                                <?php if(isset($error['sortid'])) echo $error['sortid']; ?>
+                            </div>
                         </div>
                         <div class="col-md-3">
                             <label for="Spalte" class="form-label">Board auswählen</label>

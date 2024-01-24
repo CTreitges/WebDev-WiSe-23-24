@@ -41,4 +41,19 @@ class Validation extends BaseConfig
     // --------------------------------------------------------------------
     // Rules
     // --------------------------------------------------------------------
+
+    public $spaltenbearbeiten = [
+            'spalte' => 'required',
+            'spaltenbeschreibung' => 'required',
+            'sortid' => 'numeric',
+        ];
+
+    public $spaltenbearbeiten_errors = [
+        'spalte' => [
+            'required' => 'Bitte geben Sie eine Spaltenbezeichnung an.'],
+        'spaltenbeschreibung' => [
+            'required' => 'Bitte geben Sie eine Spaltenbeschreibung an.'],
+        'sortid' => [
+            'numeric' => 'Bitte geben Sie eine Zahl ein.'],
+    ];
 }

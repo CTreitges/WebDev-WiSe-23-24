@@ -50,23 +50,45 @@ class SpaltenController extends BaseController
 
     public function submitSpalten()
     {
+        $validation = \Config\Services::validation();
         if(isset($_POST['submitSpalten'])) {
 
-            if(isset($_POST['id']) && $_POST['id'] != '') {
-                $this->spaltenmodel->updateSpalte();
+            if (isset($_POST['id']) && $_POST['id'] != '') {
+                $id = $_POST['id'];
             }
-            else {
-                $this->spaltenmodel->createSpalte();
+
+            if ($validation->run($_POST,'spaltenbearbeiten')) {
+
+                if (isset($_POST['id']) && $_POST['id'] != '') {
+                    $this->spaltenmodel->updateSpalte();
+                } else {
+                    $this->spaltenmodel->createSpalte();
+                }
+                return redirect()->to(base_url('Spalten'));
+
+            } else {
+                $spaltenmodel = new SpaltenModel();
+                $data['spalten'] = $spaltenmodel->getSpalten();
+                $data['boards'] = $spaltenmodel->getBoards();
+                $data['error'] = $this->validation->getErrors();
+
+                if (isset($_POST['id']) && $_POST['id'] != '') {
+                    $data['title'] = 'Spalte bearbeiten';
+                    $data['todo'] = 1;
+                    $data['update'] = $this->spaltenmodel->getSpalte($id);
+                } else {
+                    $data['title'] = 'Spalte erstellen';
+                    $data['todo'] = 0;
+                }
+
+                echo view('Sites/SpaltenCRUD', $data);
             }
-            return redirect()->to(base_url('Spalten'));
 
         }
         elseif (isset($_POST['deleteSpalten'])){
             $this->spaltenmodel->deleteSpalte();
             return redirect()->to(base_url('Spalten'));
         }
-
-        return redirect()->to(base_url('Spalten'));
     }
 
 }
