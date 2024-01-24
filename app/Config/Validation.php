@@ -47,23 +47,31 @@ class Validation extends BaseConfig
     ];
 
     public $spaltenbearbeiten = [
-            'Spalte'                => 'required',
-            'Spaltenbeschreibung'   => 'required',
-            'Sortid'                => 'numeric',
+        'Spalte'                => 'required',
+        'Spaltenbeschreibung'   => 'required',
+        'Sortid'                => 'numeric',
+    ];
+
+    public $boardsbearbeiten = [
+        'Board' => 'required',
     ];
 
     public $tasksbearbeiten_errors = [
         'Bezeichnung' => [
-            'required' => 'Bitte geben Sie eine Bezeichnung für die Task ein.'
-        ],
+            'required' => 'Bitte geben Sie eine Bezeichnung für die Task ein.'],
     ];
 
     public $spaltenbearbeiten_errors = [
         'Spalte' => [
-            'required' => 'Bitte geben Sie eine Spaltenbezeichnung an.'],
+            'required' => 'Bitte geben Sie eine Bezeichnung für die Spalte ein.'],
         'Spaltenbeschreibung' => [
-            'required' => 'Bitte geben Sie eine Spaltenbeschreibung an.'],
+            'required' => 'Bitte geben Sie eine Beschreibung für die Spalte ein.'],
         'Sortid' => [
             'numeric' => 'Bitte geben Sie eine Zahl ein.'],
+    ];
+
+    public $boardsbearbeiten_errors = [
+        'Board' => [
+            'required' => 'Bitte geben Sie eine Bezeichnung für das Board ein.'],
     ];
 }

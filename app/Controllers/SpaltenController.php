@@ -85,5 +85,4 @@ class SpaltenController extends BaseController
             return redirect()->to(base_url('Spalten'));
         }
     }
-
 }

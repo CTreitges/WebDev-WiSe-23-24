@@ -10,7 +10,7 @@
                     <input type="hidden" name="id" value="<?php echo isset($update['id']) ? $update['id'] : '' ?>">
                     <div class="row g-3">
                         <div class="col-md-3">
-                            <label for="Spalte" class="form-label">Spalte</label>
+                            <label for="Spalte" class="form-label">Bezeichnung der Spalte</label>
                         </div>
                         <div class="col-md-9">
                             <input type="text" class="form-control <?=(isset($error['Spalte']))?'is-invalid':'' ?>" id="Spalte" name="Spalte" value="<?php echo isset($update['spalte']) ? $update['spalte'] : '' ?>" <?php if ($todo == 2) {echo 'disabled';} ?>>

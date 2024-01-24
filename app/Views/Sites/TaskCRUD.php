@@ -25,7 +25,7 @@
                             <label for="Bezeichnung" class="form-label">Bezeichnung der Task</label>
                         </div>
                         <div class="col-md-9">
-                            <textarea class="form-control <?=(isset($error['Bezeichnung']))?'is-invalid':'' ?>"  id="Bezeichnung" style="height: 100px" name="Bezeichnung" <?php if ($todo == 2) {echo 'disabled';} ?>><?php echo isset($update['tasks']) ? $update['tasks'] : '' ?></textarea>
+                            <input type="text" class="form-control <?=(isset($error['Bezeichnung']))?'is-invalid':'' ?>" id="Bezeichnung" name="Bezeichnung" value="<?php echo isset($update['tasks']) ? $update['tasks'] : '' ?>" <?php if ($todo == 2) {echo 'disabled';} ?>>
                             <div class="invalid-feedback">
                                 <?php if(isset($error['Bezeichnung'])) echo $error['Bezeichnung']; ?>
                             </div>

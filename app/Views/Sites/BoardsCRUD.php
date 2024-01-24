@@ -10,10 +10,13 @@
                     <input type="hidden" name="id" value="<?php echo isset($update['id']) ? $update['id'] : '' ?>">
                     <div class="row g-3">
                         <div class="col-md-3">
-                            <label for="Board" class="form-label">Board</label>
+                            <label for="Board" class="form-label">Bezeichnung des Boards</label>
                         </div>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" id="Board" name="Board" value="<?php echo isset($update['board']) ? $update['board'] : '' ?>" <?php if ($todo == 2) {echo 'disabled';} ?>>
+                            <input type="text" class="form-control <?=(isset($error['Board']))?'is-invalid':'' ?>" id="Board" name="Board" value="<?php echo isset($update['board']) ? $update['board'] : '' ?>" <?php if ($todo == 2) {echo 'disabled';} ?>>
+                            <div class="invalid-feedback">
+                                <?php if(isset($error['Board'])) echo $error['Board']; ?>
+                            </div>
                         </div>
                     </div>
                     <?php if($todo == 0) : ?>

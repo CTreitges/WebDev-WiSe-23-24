@@ -45,23 +45,38 @@ class BoardsController extends BaseController
 
     public function submitBoards()
     {
+        $validation = \Config\Services::validation();
+
         if(isset($_POST['submitBoards'])) {
 
-            if(isset($_POST['id']) && $_POST['id'] != '') {
-                $this->boardsmodel->updateBoard();
-            }
-            else {
-                $this->boardsmodel->createBoard();
-            }
-            return redirect()->to(base_url('Boards'));
+            if ($validation->run($_POST,'boardsbearbeiten')) {
 
+                if (isset($_POST['id']) && $_POST['id'] != '') {
+                    $this->boardsmodel->updateBoard();
+                } else {
+                    $this->boardsmodel->createBoard();
+                }
+                return redirect()->to(base_url('Boards'));
+
+            } else {
+                $data['boards'] = $this->boardsmodel->getBoards();
+                $data['error'] = $this->validation->getErrors();
+
+                if (isset($_POST['id']) && $_POST['id'] != '') {
+                    $data['title'] = 'Board bearbeiten';
+                    $data['todo'] = 1;
+                    $data['update'] = $this->boardsmodel->getBoard($_POST['id']);
+                } else {
+                    $data['title'] = 'Board erstellen';
+                    $data['todo'] = 0;
+                }
+
+                echo view('Sites/BoardsCRUD', $data);
+            }
         }
         elseif (isset($_POST['deleteBoards'])){
             $this->boardsmodel->deleteBoard();
             return redirect()->to(base_url('Boards'));
         }
-
-        return redirect()->to(base_url('Boards'));
     }
-
 }
