@@ -42,7 +42,7 @@
                         <div class="col-md-9">
                             <select class="form-select" aria-label="Board" type="text" id="Board" name="Board" <?php if ($todo == 2) {echo 'disabled';} ?>>
                                 <?php for($i=0; $i < count($boards); $i++): ?>
-                                    <option value="<?php echo $boards[$i]['id'] ?>" <?php if (isset($update['id'])) {if($update['boardsid'] == $i + 1){echo 'selected';}} ?>><?php echo $boards[$i]['board'] ?></option>
+                                    <option value="<?php echo $boards[$i]['id'] ?>" <?php if (isset($update['id'])) {if($update['boardsid'] == $boards[$i]['id']){echo 'selected';}} ?>><?php echo $boards[$i]['board'] ?></option>
                                 <?php endfor;?>
                             </select>
                         </div>
