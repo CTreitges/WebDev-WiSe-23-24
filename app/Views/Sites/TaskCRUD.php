@@ -57,7 +57,7 @@
                         <div class="col-md-9">
                             <select class="form-select" aria-label="Spalte" type="text" id="Spalte" name="Spalte" <?php if ($todo == 2) {echo 'disabled';} ?>>
                                 <?php for($i=0; $i < count($spalten); $i++): ?>
-                                    <option value="<?php echo $spalten[$i]['id'] ?>" <?php if (isset($update['id'])) {if($update['spaltenid'] == $i + 1){echo 'selected';}} ?>><?php echo $spalten[$i]['spalte'] ?></option>
+                                    <option value="<?php echo $spalten[$i]['id'] ?>" <?php if (isset($update['id'])) {if($update['spaltenid'] == $spalten[$i]['id']){echo 'selected';}} ?>><?php echo $spalten[$i]['spalte'] ?></option>
                                 <?php endfor;?>
                             </select>
                         </div>

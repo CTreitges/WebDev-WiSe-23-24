@@ -45,11 +45,9 @@ class BoardsController extends BaseController
 
     public function submitBoards()
     {
-        $validation = \Config\Services::validation();
-
         if(isset($_POST['submitBoards'])) {
 
-            if ($validation->run($_POST,'boardsbearbeiten')) {
+            if ($this->validation->run($_POST,'boardsbearbeiten')) {
 
                 if (isset($_POST['id']) && $_POST['id'] != '') {
                     $this->boardsmodel->updateBoard();

@@ -46,14 +46,12 @@ class SpaltenController extends BaseController
 
     public function submitSpalten()
     {
-        $validation = \Config\Services::validation();
-
         //echo (var_dump($_POST));
         //die;
 
         if(isset($_POST['submitSpalten'])) {
 
-            if ($validation->run($_POST,'spaltenbearbeiten')) {
+            if ($this->validation->run($_POST,'spaltenbearbeiten')) {
 
                 if (isset($_POST['id']) && $_POST['id'] != '') {
                     $this->spaltenmodel->updateSpalte();

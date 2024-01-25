@@ -77,11 +77,9 @@ class TaskController extends BaseController
 
     public function submitTasks()
     {
-        $validation = \Config\Services::validation();
-
         if(isset($_POST['submitTasks'])) {
 
-            if ($validation->run($_POST,'tasksbearbeiten')) {
+            if ($this->validation->run($_POST,'tasksbearbeiten')) {
                 if (isset($_POST['id']) && $_POST['id'] != '') {
                     $this->taskmodel->updateTask();
                 } else {
