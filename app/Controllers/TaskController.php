@@ -14,6 +14,7 @@ class TaskController extends BaseController
     public function index($title='')
     {
         $data['tasks'] = $this->taskmodel->getTasks();
+        $data['spalten'] = $this->taskmodel->getSpalten();
         $data['title'] = 'Startseite';
         echo view('Sites/Startseite', $data);
     }
