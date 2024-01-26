@@ -39,7 +39,7 @@
                                             <i class="fa-symbols fas fa-pen-to-square text-dark"></i>
                                         </a>
                                         <a href="<?php echo base_url('/boardLoeschen'.'/' . $item['id'] . '/2'); ?>">
-                                            <i class="fa-symbols fa-solid fa-trash ps-1 text-dark"></i>
+                                            <i class="fa-symbols fa-solid fa-trash ps-1 text-danger"></i>
                                         </a>
                                     </td>
                                 </tr>
