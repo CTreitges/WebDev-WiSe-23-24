@@ -23,6 +23,14 @@ class TaskModel extends Model
         return $result->getResultArray();
     }
 
+    public function getSpaltenByBoardId($boardId){
+        $this->spalten = $this->db->table('spalten');
+        $this->spalten->select();
+        $this->spalten->where('boardsid', $boardId);
+        $result = $this->spalten->get();
+        return $result->getResultArray();
+    }
+
     public function getTask($id = null)
     {
         $this->tasks = $this->db->table('tasks');
@@ -35,6 +43,13 @@ class TaskModel extends Model
         if ($id != NULL) {
             return $result->getRowArray();
         } else return $result->getResultArray();
+    }
+
+    public function getBoards(){
+        $this->boards = $this->db->table('boards');
+        $this->boards->select();
+        $result = $this->boards->get();
+        return $result->getResultArray();
     }
 
     public function createTask()

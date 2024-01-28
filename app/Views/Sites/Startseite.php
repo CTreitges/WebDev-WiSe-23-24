@@ -2,9 +2,19 @@
 
 <?= $this->section('content') ?>
 <main>
+    <?php
+    $taskModel = new \App\Models\TaskModel();
+    $boards = $taskModel->getBoards();
+    $spalten = $taskModel->getSpaltenByBoardId(5);
+    ?>
     <div class="card">
-        <div class="card-header">
+        <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
             <h3 class="card-title">Tasks</h3>
+            <select name="boards" id="boards" style="width: 200px; height: 35px; border-radius: 5px; border: 1px solid #ccc; padding: 5px;">
+                <?php foreach ($boards as $board): ?>
+                    <option value="<?= $board['id'] ?>"><?= $board['board'] ?></option>
+                <?php endforeach; ?>
+            </select>
         </div>
         <div class="card-body">
             <div class="d-flex justify-content-between mb-3 mt-2">
