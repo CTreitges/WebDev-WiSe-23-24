@@ -5,14 +5,18 @@
     <?php
     $taskModel = new \App\Models\TaskModel();
     $boards = $taskModel->getBoards();
-    $spalten = $taskModel->getSpaltenByBoardId($boardID = $boards[0]['id']);
+    if(session_status() == PHP_SESSION_NONE){
+        session_start();
+    }
+    $boardID = isset($_SESSION['boardID']) ? $_SESSION['boardID'] : $boards[0]['id'];
+    $spalten = $taskModel->getSpaltenByBoardId($boardID);
     ?>
     <div class="card">
         <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
             <h3 class="card-title">Tasks</h3>
-            <select name="boards" id="boards" onchange="reloadBoard()" style="width: 200px; height: 35px; border-radius: 5px; border: 1px solid #ccc; padding: 5px;">
+            <select name="boards" id="boards" style="width: 200px; height: 35px; border-radius: 5px; border: 1px solid #ccc; padding: 5px;">
                 <?php foreach ($boards as $board): ?>
-                    <option value="<?= $board['id'] ?>"><?= $board['board'] ?></option>
+                    <option value="<?= $board['id'] ?>" <?= $board['id'] == $boardID ? 'selected' : '' ?>><?= $board['board'] ?></option>
                 <?php endforeach; ?>
             </select>
         </div>
@@ -76,11 +80,13 @@
         </div>
     </div>
     <script>
-        function reloadBoard()
-        {
-            var boardID = document.getElementById("boards").value;
-            console.log(boardID);
-        }
+        document.getElementById('boards').addEventListener('change', function() {
+            var boardId = this.value;
+            fetch('/public/setBoardId/' + boardId);
+            setTimeout(function() {
+                location.reload();
+            }, 200);
+        });
     </script>
 </main>
 <?= $this->endSection() ?>
