@@ -5,12 +5,12 @@
     <?php
     $taskModel = new \App\Models\TaskModel();
     $boards = $taskModel->getBoards();
-    $spalten = $taskModel->getSpaltenByBoardId(5);
+    $spalten = $taskModel->getSpaltenByBoardId($boardID = $boards[0]['id']);
     ?>
     <div class="card">
         <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
             <h3 class="card-title">Tasks</h3>
-            <select name="boards" id="boards" style="width: 200px; height: 35px; border-radius: 5px; border: 1px solid #ccc; padding: 5px;">
+            <select name="boards" id="boards" onchange="reloadBoard()" style="width: 200px; height: 35px; border-radius: 5px; border: 1px solid #ccc; padding: 5px;">
                 <?php foreach ($boards as $board): ?>
                     <option value="<?= $board['id'] ?>"><?= $board['board'] ?></option>
                 <?php endforeach; ?>
@@ -75,5 +75,12 @@
             </div>
         </div>
     </div>
+    <script>
+        function reloadBoard()
+        {
+            var boardID = document.getElementById("boards").value;
+            console.log(boardID);
+        }
+    </script>
 </main>
 <?= $this->endSection() ?>

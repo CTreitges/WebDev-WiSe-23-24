@@ -77,6 +77,12 @@ class TaskController extends BaseController
         echo view('Sites/TaskCRUD', $data);
     }
 
+    public function getSpaltenByBoardId($boardId)
+    {
+        $spalten = $this->taskmodel->getSpaltenByBoardId($boardId);
+        echo json_encode($spalten);
+    }
+
     public function submitTasks()
     {
         if(isset($_POST['submitTasks'])) {
