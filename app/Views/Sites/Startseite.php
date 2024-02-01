@@ -3,13 +3,7 @@
 <?= $this->section('content') ?>
 <main>
     <?php
-    $taskModel = new \App\Models\TaskModel();
-    $boards = $taskModel->getBoards();
-    if(session_status() == PHP_SESSION_NONE){
-        session_start();
-    }
-    $boardID = isset($_SESSION['boardID']) ? $_SESSION['boardID'] : $boards[0]['id'];
-    $spalten = $taskModel->getSpaltenByBoardId($boardID);
+
     ?>
     <div class="card">
         <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">

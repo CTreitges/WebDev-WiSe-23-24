@@ -43,6 +43,11 @@ class BoardsController extends BaseController
         echo view('Sites/BoardsCRUD', $data);
     }
 
+    public function setBoardId($boardId)
+    {
+        $_SESSION['boardID'] = $boardId;
+    }
+
     public function submitBoards()
     {
         if(isset($_POST['submitBoards'])) {

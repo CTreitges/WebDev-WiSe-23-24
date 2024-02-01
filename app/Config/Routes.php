@@ -28,5 +28,5 @@ $routes->get('/Boards', 'BoardsController::index');
 $routes->get('/boardErstellen', 'BoardsController::crudBoards/0/0');
 $routes->get('/boardBearbeiten/(:num)/1','BoardsController::crudBoards/$1/1');
 $routes->get('/boardLoeschen/(:num)/2','BoardsController::crudBoards/$1/2');
-$routes->get('/setBoardId/(:num)', 'TaskController::setBoardId/$1');
+$routes->get('/setBoardId/(:num)', 'BoardsController::setBoardId/$1');
 $routes->post('/submitBoards','BoardsController::submitBoards');

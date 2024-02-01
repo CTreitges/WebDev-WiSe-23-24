@@ -13,8 +13,12 @@ class TaskController extends BaseController
 
     public function index($title='')
     {
+        if(session_status() == PHP_SESSION_NONE){
+            session_start();
+        }
+        $data['boardID'] = isset($_SESSION['boardID']) ? $_SESSION['boardID'] : $boards[0]['id'];
+        $data['spalten'] = $this->taskmodel->getSpaltenByBoardId($_SESSION['boardID']);
         $data['tasks'] = $this->taskmodel->getTasks();
-        $data['spalten'] = $this->taskmodel->getSpalten();
         $data['boards'] = $this->taskmodel->getBoards();
         $data['title'] = 'Startseite';
         echo view('Sites/Startseite', $data);
@@ -75,11 +79,6 @@ class TaskController extends BaseController
         }
 
         echo view('Sites/TaskCRUD', $data);
-    }
-
-    public function setBoardId($boardId)
-    {
-        $_SESSION['boardID'] = $boardId;
     }
 
     public function submitTasks()
