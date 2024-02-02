@@ -10,7 +10,29 @@
                     <input type="hidden" name="id" value="<?php echo isset($update['id']) ? $update['id'] : '' ?>">
                     <div class="row g-3">
                         <div class="col-md-3">
-                            <label for="Person" class="form-label">Person auswählen</label>
+                            <label for="Person" class="form-label">Taskbezeichnung & Taskart </label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="row g-3">
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control <?=(isset($error['Bezeichnung']))?'is-invalid':'' ?>" id="Bezeichnung" name="Bezeichnung" value="<?php echo isset($update['tasks']) ? $update['tasks'] : '' ?>" <?php if ($todo == 2) {echo 'disabled';} ?>>
+                                    <div class="invalid-feedback">
+                                        <?php if(isset($error['Bezeichnung'])) echo $error['Bezeichnung']; ?>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-select border-dark-subtle" aria-label="Taskart" type="text" id="Taskart" name="Taskart" <?php if ($todo == 2) {echo 'disabled';} ?>>
+                                        <?php for($i=0; $i < count($taskarten); $i++): ?>
+                                            <option value="<?php echo $taskarten[$i]['id'] ?>" <?php if (isset($update['id'])) {if($update['taskartenid'] == $taskarten[$i]['id']){echo 'selected';}} ?>>
+                                                <?php echo $taskarten[$i]['taskart']; ?>
+                                            </option>
+                                        <?php endfor;?>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="Bezeichnung" class="form-label">Person auswählen</label>
                         </div>
                         <div class="col-md-9">
                             <select class="form-select" aria-label="Person" type="text" id="Person" name="Person" <?php if ($todo == 2) {echo 'disabled';} ?>>
@@ -22,28 +44,20 @@
                             </select>
                         </div>
                         <div class="col-md-3">
-                            <label for="Bezeichnung" class="form-label">Bezeichnung der Task</label>
-                        </div>
-                        <div class="col-md-9">
-                            <input type="text" class="form-control <?=(isset($error['Bezeichnung']))?'is-invalid':'' ?>" id="Bezeichnung" name="Bezeichnung" value="<?php echo isset($update['tasks']) ? $update['tasks'] : '' ?>" <?php if ($todo == 2) {echo 'disabled';} ?>>
-                            <div class="invalid-feedback">
-                                <?php if(isset($error['Bezeichnung'])) echo $error['Bezeichnung']; ?>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
                             <label for="Erinnerung" class="form-label">Erinnerung</label>
                         </div>
                         <div class="col-md-9">
-                            <select class="form-select" aria-label="Erinnerung" type="text" id="Erinnerung" name="Erinnerung" <?php if ($todo == 2) {echo 'disabled';} ?>>
-                                <option value="1" <?php if (isset($update['id'])) {if($update['erinnerung'] == 1){echo 'selected';}} ?>>Ja</option>
-                                <option value="0" <?php if (isset($update['id'])) {if($update['erinnerung'] == 0){echo 'selected';}} ?>>Nein</option>
-                            </select>
-                        </div>
-                        <div class="col-md-3">
-                            <label for="Erinnerungsdatum" class="form-label">Erinnerungsdatum</label> <!-- Todo soll disabled sein, wenn Erinnerung NEIN -->
-                        </div>
-                        <div class="col-md-9">
-                            <input type="datetime-local" id="Erinnerungsdatum" class="form-control" name="Erinnerungsdatum" value="<?php echo substr(isset($update['erinnerungsdatum']) ? $update['erinnerungsdatum'] : '', 0,16) ?>" <?php if ($todo == 2) {echo 'disabled';} ?>>
+                            <div class="row g-3">
+                                <div class="col-md-3">
+                                    <select class="form-select" aria-label="Erinnerung" type="text" id="Erinnerung" name="Erinnerung" <?php if ($todo == 2) {echo 'disabled';} ?>>
+                                        <option value="1" <?php if (isset($update['id'])) {if($update['erinnerung'] == 1){echo 'selected';}} ?>>Ja</option>
+                                        <option value="0" <?php if (isset($update['id'])) {if($update['erinnerung'] == 0){echo 'selected';}} ?>>Nein</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="datetime-local" id="Erinnerungsdatum" class="form-control" name="Erinnerungsdatum" value="<?php echo substr(isset($update['erinnerungsdatum']) ? $update['erinnerungsdatum'] : '', 0,16) ?>" <?php if ($todo == 2) {echo 'disabled';} ?>>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-3">
                             <label for="Notiz" class="form-label">Notiz</label>

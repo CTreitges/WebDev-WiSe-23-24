@@ -57,7 +57,7 @@ class TaskModel extends Model
         $this->tasks = $this->db->table('tasks');
         $this->tasks->insert(array(
             'personenid' => $_POST['Person'],
-            'taskartenid' => 1,
+            'taskartenid' => $_POST['Taskart'],
             'spaltenid' => $_POST['Spalte'],
             'sortid' => 1,
             'tasks' => $_POST['Bezeichnung'],
@@ -79,7 +79,8 @@ class TaskModel extends Model
             'tasks' => $_POST['Bezeichnung'],
             'erinnerungsdatum' => $_POST['Erinnerungsdatum'],
             'erinnerung' => $_POST['Erinnerung'],
-            'notizen' => $_POST['Notiz'],));
+            'notizen' => $_POST['Notiz'],
+            'taskartenid' => $_POST['Taskart'],));
     }
 
     public function deleteTask()
@@ -100,5 +101,13 @@ class TaskModel extends Model
             return $result->getRowArray();
         else
             return $result->getResultArray();
+    }
+
+    public function getTaskarten()
+    {
+        $this->taskarten = $this->db->table('taskarten');
+        $this->taskarten->select();
+        $result = $this->taskarten->get();
+        return $result->getResultArray();
     }
 }

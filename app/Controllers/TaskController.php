@@ -21,6 +21,7 @@ class TaskController extends BaseController
         $data['spalten'] = $this->taskmodel->getSpaltenByBoardId($boardID);
         $data['tasks'] = $this->taskmodel->getTasks();
         $data['personen'] = $this->taskmodel->getPersonen();
+        $data['taskarten'] = $this->taskmodel->getTaskarten();
         $data['boards'] = $this->taskmodel->getBoards();
         $data['boardID'] = $boardID;
         $data['title'] = 'Startseite';
@@ -64,6 +65,7 @@ class TaskController extends BaseController
         $data['personen'] = $this->taskmodel->getPersonen();
         $data['spalten'] = $this->taskmodel->getSpalten();
         $data['tasks'] = $this->taskmodel->getTasks();
+        $data['taskarten'] = $this->taskmodel->getTaskarten();
         $data['todo'] = $todo;
         switch ($todo) {
             case 0:
@@ -99,6 +101,7 @@ class TaskController extends BaseController
                 $data['personen'] = $this->taskmodel->getPersonen();
                 $data['spalten'] = $this->taskmodel->getSpalten();
                 $data['tasks'] = $this->taskmodel->getTasks();
+                $data['taskarten'] = $this->taskmodel->getTaskarten();
                 $data['error'] = $this->validation->getErrors();
 
                 if (isset($_POST['id']) && $_POST['id'] != '') {
