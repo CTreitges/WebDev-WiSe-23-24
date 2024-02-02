@@ -44,7 +44,7 @@
                                                         </a>
                                                     </div>
                                                 </div>
-                                                <div class="d-flex justify-content-between mb-3">
+                                                <div class="d-flex justify-content-between mb-1">
                                                     <div class="text-secondary">
                                                         <i class="fa-regular fa-calendar fa-fw"></i>
                                                         <?= date('d.m.Y', strtotime($task['erstelldatum'])) ?>
@@ -54,6 +54,12 @@
                                                         <i class="fa-regular fa-bell fa-fw"></i>
                                                         <?= date('d.m.Y H:i', strtotime($task['erinnerungsdatum'])) ?>
                                                         <?php endif ?>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between mb-3">
+                                                    <div class="text-secondary">
+                                                        <i class="fa-regular fa-user fa-fw"></i>
+                                                        <?php foreach ($personen as $person): if ($task['personenid'] == $person['id']) : echo($person['vorname'] . ' ' . $person['name']); endif; endforeach; ?>
                                                     </div>
                                                 </div>
                                                 <div class="d-flex justify-content-between mb-1">

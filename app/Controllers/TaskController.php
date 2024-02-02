@@ -11,7 +11,7 @@ class TaskController extends BaseController
         $this->taskmodel = new TaskModel();
     }
 
-    public function index($title='')
+    public function index()
     {
         if(session_status() == PHP_SESSION_NONE){
             session_start();
@@ -20,6 +20,7 @@ class TaskController extends BaseController
         $boardID = isset($_SESSION['boardID']) ? $_SESSION['boardID'] : $boards[0]['id'];
         $data['spalten'] = $this->taskmodel->getSpaltenByBoardId($boardID);
         $data['tasks'] = $this->taskmodel->getTasks();
+        $data['personen'] = $this->taskmodel->getPersonen();
         $data['boards'] = $this->taskmodel->getBoards();
         $data['boardID'] = $boardID;
         $data['title'] = 'Startseite';
