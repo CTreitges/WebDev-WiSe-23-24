@@ -2,9 +2,6 @@
 
 <?= $this->section('content') ?>
 <main>
-    <?php
-
-    ?>
     <div class="card">
         <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
             <h3 class="card-title">Tasks</h3>

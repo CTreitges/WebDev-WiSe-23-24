@@ -53,7 +53,7 @@ class SpaltenModel extends Model
             'spaltenbeschreibung' => $_POST['Spaltenbeschreibung'],
             'spalte' => $_POST['Spalte'],
             'sortid' => $_POST['Sortid'],
-            'boardsid' => '1',));
+            'boardsid' => $_POST['Board'],));
     }
 
     public function updateSpalte()
