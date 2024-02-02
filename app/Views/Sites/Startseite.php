@@ -32,10 +32,13 @@
                                         <div class="card mb-2">
                                             <div class="card-body">
                                                 <div class="d-flex justify-content-between mb-1">
-                                                    <div class="me-3">
-                                                        <h5 class="card-title"><?= $task['tasks'] ?></h5>
+                                                    <div class="d-flex align-items-baseline">
+                                                        <i class="<?php foreach ($taskarten as $taskart): if ($task['taskartenid'] == $taskart['id']) : echo($taskart['icon']); endif; endforeach; ?>"></i>
+                                                        <div class="ms-2">
+                                                            <h5 class="card-title"><?= $task['tasks'] ?></h5>
+                                                        </div>
                                                     </div>
-                                                    <div class="d-flex align-items-center mb-1">
+                                                    <div class="d-flex align-items-baseline mb-1">
                                                         <a href="<?php echo base_url('/taskBearbeiten'.'/' . $task['id'] . '/1'); ?>" style="color: transparent">
                                                             <i class="fa-symbols fas fa-pen-to-square text-dark"></i>
                                                         </a>
