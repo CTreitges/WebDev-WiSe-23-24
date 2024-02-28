@@ -26,10 +26,10 @@
                                 <h5 class="card-title h5 mb-1"><?= $spalten['spalte'] ?></h5>
                                 <small class="mb-0"><?= $spalten['spaltenbeschreibung'] ?></small>
                             </div>
-                            <div class="card-body dragparent data-column-id="<?= $spalten['id'] ?>">
+                            <div class="card-body dragparent">
                                 <?php foreach ($tasks as $task): ?>
                                     <?php if ($task['spaltenid'] == $spalten['id']): ?>
-                                        <div class="card mb-2" data-task-id="<?= $task['id'] ?>">
+                                        <div class="card mb-2">
                                             <div class="card-body">
                                                 <div class="d-flex justify-content-between mb-1">
                                                     <div class="me-3">
@@ -86,12 +86,8 @@
         });
 
         document.addEventListener('DOMContentLoaded', function() {
-            var containers = Array.from(document.querySelectorAll('.dragable'));
-            var drake = dragula(containers);
-
-            drake.on('drop', function(el, target, source, sibling) {
-
-            }
+            var containers = Array.from(document.querySelectorAll('.dragparent'));
+            dragula(containers);
         });
     </script>
 </main>
