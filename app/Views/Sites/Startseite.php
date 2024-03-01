@@ -1,12 +1,12 @@
 <?= $this->extend('layouts/layout') ?>
 
-// Content Section
+<!--Content Section-->
 <?= $this->section('content') ?>
 <main>
     <div class="card">
         <div class="card-header" style="display: flex; justify-content: space-between; align-items: center;">
             <h3 class="card-title">Tasks</h3>
-            // Dropdown für Boards
+<!--            Dropdown für Boards-->
             <select name="boards" id="boards" style="width: 200px; height: 35px; border-radius: 5px; border: 1px solid #ccc; padding: 5px;">
                 <?php foreach ($boards as $board): ?>
                     <option value="<?= $board['id'] ?>" <?= $board['id'] == $boardID ? 'selected' : '' ?>><?= $board['board'] ?></option>
@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="d-flex flex-row flex-nowrap overflow-auto">
-                // Spalten
+<!--                Spalten-->
                 <?php foreach ($spalten as $spalten): ?>
                     <div class="me-3">
                         <div class="card mb-3" style="width: 22.5em">
@@ -30,7 +30,7 @@
                                 <small class="mb-0"><?= $spalten['spaltenbeschreibung'] ?></small>
                             </div>
                             <div class="card-body dragparent">
-                                // Tasks
+<!--                                Tasks-->
                                 <?php foreach ($tasks as $task): ?>
                                     <?php if ($task['spaltenid'] == $spalten['id']): ?>
                                         <div class="card mb-2">
@@ -40,7 +40,7 @@
                                                         <h5 class="card-title"><?= $task['tasks'] ?></h5>
                                                     </div>
                                                     <div class="d-flex align-items-center mb-1">
-                                                        // Bearbeiten und Löschen
+<!--                                                        Bearbeiten und Löschen-->
                                                         <a href="<?php echo base_url('/taskBearbeiten'.'/' . $task['id'] . '/1'); ?>" style="color: transparent">
                                                             <i class="fa-symbols fas fa-pen-to-square text-dark"></i>
                                                         </a>
@@ -52,11 +52,11 @@
                                                 <div class="d-flex justify-content-between mb-1">
                                                     <div class="text-secondary">
                                                         <i class="fa-regular fa-calendar fa-fw"></i>
-                                                        // Datum
+<!--                                                       Datum-->
                                                         <?= date('d.m.Y', strtotime($task['erstelldatum'])) ?>
                                                     </div>
                                                     <div class="text-secondary">
-                                                        // Erinnerung
+<!--                                                        Erinnerung-->
                                                         <?php if (isset($task['erinnerungsdatum']) && $task['erinnerung']==1) : ?>
                                                         <i class="fa-regular fa-bell fa-fw"></i>
                                                         <?= date('d.m.Y H:i', strtotime($task['erinnerungsdatum'])) ?>
@@ -66,12 +66,12 @@
                                                 <div class="d-flex justify-content-between mb-3">
                                                     <div class="text-secondary">
                                                         <i class="fa-regular fa-user fa-fw"></i>
-                                                        // Person
+<!--                                                        Person-->
                                                         <?php foreach ($personen as $person): if ($task['personenid'] == $person['id']) : echo($person['vorname'] . ' ' . $person['name']); endif; endforeach; ?>
                                                     </div>
                                                 </div>
                                                 <div class="d-flex justify-content-between mb-1">
-                                                    // Notizen
+<!--                                                    Notizen-->
                                                     <p class="card-text"><?= $task['notizen'] ?></p>
                                                 </div>
                                             </div>

@@ -83,7 +83,7 @@ class TaskController extends BaseController
         echo view('Sites/TaskCRUD', $data);
     }
 
-    // Funktion zum Erstellen, Bearbeiten und Löschen von Tasks
+//    Funktion zum Erstellen, Bearbeiten und Löschen von Tasks
     public function submitTasks()
     {
         if(isset($_POST['submitTasks'])) {
