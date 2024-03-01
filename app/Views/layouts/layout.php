@@ -12,6 +12,7 @@
     <link href="https://cdn.jsdelivr.net/gh/bevacqua/dragula@3.7.3/dist/dragula.min.css" rel="stylesheet">
 </head>
 <body>
+// Header
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark mb-1 mt-1 ps-3">
             <a class="navbar-brand" href="<?php echo base_url();?>Startseite">
@@ -37,6 +38,7 @@
         </nav>
     </header>
     <?= $this->renderSection('content') ?>
+// Footer
     <footer>
         <div class="container-fluid mb-3 mt-3 ps-3 d-flex flex-wrap justify-content-between">
             <span class="footer-text">

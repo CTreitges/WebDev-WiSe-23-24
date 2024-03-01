@@ -19,7 +19,6 @@ class BoardsController extends BaseController
 
 
     //CRUD Funktionen:
-
     public function crudBoards($id = 0, $todo = 0)
     {
         $data['boards'] = $this->boardsmodel->getBoards();
@@ -48,6 +47,7 @@ class BoardsController extends BaseController
         $_SESSION['boardID'] = $boardId;
     }
 
+    // Boards Bearbeiten
     public function submitBoards()
     {
         if(isset($_POST['submitBoards'])) {

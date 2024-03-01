@@ -7,6 +7,7 @@ use CodeIgniter\Model;
 class TaskModel extends Model
 {
 
+    // Tasks
     public function getTasks()
     {
         $this->tasks = $this->db->table('tasks');
@@ -16,6 +17,7 @@ class TaskModel extends Model
         return $result->getResultArray();
     }
 
+    // Spalten
     public function getSpalten(){
         $this->spalten = $this->db->table('spalten');
         $this->spalten->select();
@@ -23,6 +25,7 @@ class TaskModel extends Model
         return $result->getResultArray();
     }
 
+    // Spalten by BoardId
     public function getSpaltenByBoardId($boardId){
         $this->spalten = $this->db->table('spalten');
         $this->spalten->select();
@@ -31,6 +34,7 @@ class TaskModel extends Model
         return $result->getResultArray();
     }
 
+    // CRUD Funktionen:
     public function getTask($id = null)
     {
         $this->tasks = $this->db->table('tasks');
@@ -52,6 +56,7 @@ class TaskModel extends Model
         return $result->getResultArray();
     }
 
+    // CRUD Funktionen:
     public function createTask()
     {
         $this->tasks = $this->db->table('tasks');
@@ -69,6 +74,7 @@ class TaskModel extends Model
             'geloescht' => '0',));
     }
 
+    // CRUD Funktionen:
     public function updateTask()
     {
         $this->tasks = $this->db->table('tasks');
@@ -82,6 +88,7 @@ class TaskModel extends Model
             'notizen' => $_POST['Notiz'],));
     }
 
+    // CRUD Funktionen:
     public function deleteTask()
     {
         $this->tasks = $this->db->table('tasks');
@@ -89,6 +96,7 @@ class TaskModel extends Model
         $this->tasks->delete();
     }
 
+    // CRUD Funktionen:
     public function getPersonen($person_id = NULL)
     {
         $this->personen = $this->db->table('personen');

@@ -49,16 +49,15 @@ class TaskController extends BaseController
     }
     */
 
-    public function test() {
-        $taskModel = new TaskModel();
-        $data['tasks'] = $taskModel->getAllData();
-        var_dump($data);
-    }
+//    public function test() {
+//        $taskModel = new TaskModel();
+//        $data['tasks'] = $taskModel->getAllData();
+//        var_dump($data);
+//    }
 
 
 
     // GRUD Funktionen:
-
     public function crudTasks($id = 0, $todo = 0)
     {
         $data['personen'] = $this->taskmodel->getPersonen();
@@ -84,6 +83,7 @@ class TaskController extends BaseController
         echo view('Sites/TaskCRUD', $data);
     }
 
+    // Funktion zum Erstellen, Bearbeiten und Löschen von Tasks
     public function submitTasks()
     {
         if(isset($_POST['submitTasks'])) {
